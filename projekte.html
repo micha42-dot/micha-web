@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Förtsch | Projekte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'], }, colors: { 'paper': '#F5F5F2', 'ink': '#1A1A1A', 'subtle': '#6B7280', } } } }
+    </script>
+    <style> body { background-color: #F5F5F2; color: #1A1A1A; -webkit-font-smoothing: antialiased; } .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease-in-out; } .group:hover .link-underline { background-size: 100% 2px; } </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50">
+        <a href="index.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+            <li><a href="artikel.html" class="hover:text-ink transition-colors">Artikel & Arbeit</a></li>
+            <li><a href="fotos.html" class="hover:text-ink transition-colors">Fotos</a></li>
+            <li><a href="ki.html" class="hover:text-ink transition-colors">KI</a></li>
+            <li><a href="projekte.html" class="text-ink border-b-2 border-black pb-1">Projekte</a></li>
+            <li><a href="ueber.html" class="hover:text-ink transition-colors">Über</a></li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full">
+        <h1 class="font-display text-5xl md:text-7xl font-bold mb-16">Projekte.</h1>
+
+        <div class="space-y-24">
+            
+            <!-- Project 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-5 lg:col-span-4">
+                     <div class="bg-gray-300 aspect-video w-full"></div>
+                </div>
+                <div class="md:col-span-7 lg:col-span-8">
+                    <h2 class="font-display text-4xl font-bold mb-4">1E9 Magazin & Community</h2>
+                    <p class="text-lg font-light text-subtle mb-6">
+                        Mitgründung, Mitgestaltung von 1E9, Leitender Redakteur. Mitgestaltung und Planung von Events ... ebenso, wenn nötig, Designer und Gestalter.
+                    </p>
+                    <ul class="font-mono text-xs text-subtle space-y-1 mb-6">
+                        <li>Rolle: Mitgründer, Redaktion & Design</li>
+                        <li>Zeitraum: 2019 - Heute</li>
+                    </ul>
+                    <a href="#" class="inline-block border-b border-black pb-1 hover:opacity-50">Zur Website ↗</a>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gray-300"></div>
+
+            <!-- Project 2: XPLR Media -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-5 lg:col-span-4">
+                     <div class="bg-gray-300 aspect-video w-full"></div>
+                </div>
+                <div class="md:col-span-7 lg:col-span-8">
+                    <h2 class="font-display text-4xl font-bold mb-4">XPLR: MEDIA Reports</h2>
+                    <p class="text-lg font-light text-subtle mb-6">
+                        Im Rahmen von 1E9 war Michael Förtsch für XPLR: MEDIA in Bavaria federführend an Studien zu Themen wie Web3, Künstlicher Intelligenz und dem Fediverse in der Medienindustrie beteiligt.
+                    </p>
+                    <ul class="font-mono text-xs text-subtle space-y-1 mb-6">
+                        <li>Rolle: Studienleitung & Autor</li>
+                        <li>Partner: Medien.Bayern GmbH</li>
+                    </ul>
+                    <a href="https://www.xplr-media.com/reports-und-studien/" target="_blank" class="inline-block border-b border-black pb-1 hover:opacity-50">Zu den Studien ↗</a>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gray-300"></div>
+
+            <!-- Project 3: Kurator42 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-5 lg:col-span-4">
+                     <div class="bg-gray-300 aspect-video w-full"></div>
+                </div>
+                <div class="md:col-span-7 lg:col-span-8">
+                    <h2 class="font-display text-4xl font-bold mb-4">Kurator42 Newsletter</h2>
+                    <p class="text-lg font-light text-subtle mb-6">
+                        Seit 2019 veröffentlicht Michael Förtsch – leider viel zu selten und in unregelmäßigen Abständen – den Newsletter Kurator42. Darin empfiehlt er Filme, Serien, Podcasts und teilt Fundstücke aus dem Internet.
+                    </p>
+                    <ul class="font-mono text-xs text-subtle space-y-1 mb-6">
+                        <li>Plattform: Substack</li>
+                        <li>Seit: 2019</li>
+                    </ul>
+                    <a href="https://kurator42.substack.com" target="_blank" class="inline-block border-b border-black pb-1 hover:opacity-50">Zum Newsletter ↗</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+     <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto">
+        <p class="text-xs text-subtle font-mono">© 2024 Michael Förtsch</p>
+    </footer>
+</body>
+</html>

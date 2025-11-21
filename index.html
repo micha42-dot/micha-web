@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Förtsch | Home</title>
+    <meta name="description" content="Portfolio von Michael Förtsch - Journalist, Photograph, Sci-Fi-Nerd.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        'paper': '#F5F5F2', 
+                        'ink': '#1A1A1A',
+                        'subtle': '#6B7280',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F5F5F2;
+            color: #1A1A1A;
+            -webkit-font-smoothing: antialiased;
+        }
+        .link-underline {
+            background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A);
+            background-size: 0 2px;
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size .3s ease-in-out;
+        }
+        .group:hover .link-underline {
+            background-size: 100% 2px;
+        }
+        /* Active Nav State */
+        .nav-active {
+            border-bottom: 2px solid #1A1A1A;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50">
+        <a href="index.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
+        
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+            <li><a href="artikel.html" class="hover:text-ink transition-colors">Artikel & Arbeit</a></li>
+            <li><a href="fotos.html" class="hover:text-ink transition-colors">Fotos</a></li>
+            <li><a href="ki.html" class="hover:text-ink transition-colors">KI</a></li>
+            <li><a href="projekte.html" class="hover:text-ink transition-colors">Projekte</a></li>
+            <li><a href="ueber.html" class="hover:text-ink transition-colors">Über</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 md:py-24 w-full">
+
+        <!-- Hero -->
+        <header class="mb-24">
+            <h1 class="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.9] mb-8">
+                Michael<br>Förtsch.
+            </h1>
+            <div class="text-xl md:text-3xl font-light text-subtle max-w-4xl leading-snug">
+                <span class="text-ink font-normal">Journalist.</span> Photograph. <br class="md:hidden">
+                <span class="italic">Sci-Fi-Nerd.</span> Ausprobierer.
+            </div>
+        </header>
+
+        <div class="w-full h-px bg-gray-300 mb-12"></div>
+
+        <!-- Intro / Bio Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-4 lg:col-span-3">
+                <span class="font-mono text-xs uppercase tracking-widest text-subtle">Intro</span>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9">
+                <div class="text-lg md:text-xl leading-relaxed font-light max-w-3xl mb-8 space-y-6">
+                    <p>
+                        Michael lebt und arbeitet im Speckgürtel von München. Von dort aus schreibt er Sachen ins Internet. Meist sind es Artikel, Features und Reportagen über Technologie, Kunst, Kultur, das Internet, Videospiele, die Videospielbranche, Film und Fernsehen.
+                    </p>
+                    <p>
+                        Dafür experimentiert er auch ganz gerne mit "neuen Technologien" wie Künstlicher Intelligenz, Web3-Applikationen, Virtual Reality und vielem mehr. Er bezeichnet sich daher ganz gerne als Kultur-, Entertainment- und Tech-Journalist. Jedoch photographiert er ebenso ganz gerne. Unter anderem Architektur, Landschaften und Menschen.
+                    </p>
+                    <p>
+                        Bereits seit mehreren Jahren beschäftigt sich Michael mal mehr oder weniger intensiv mit Künstlicher Intelligenz, insbesondere mit generativer Künstlicher Intelligenz. Er denkt und schreibt darüber, wie diese kreativ eingesetzt werden und wie sie unser Leben und Arbeiten sowohl positiv als auch negativ beeinflussen kann. Dabei versucht er auch anderen zu helfen, mit diesen Veränderungen gewinnbringend umzugehen. 
+                    </p>
+                    <p class="font-medium text-ink">
+                        Wer über KI mit Michael reden möchte, kann ihn einfach anschreiben.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-4 mt-12">
+                    <a href="ueber.html" class="group flex items-center gap-4 font-display text-2xl md:text-3xl font-semibold">
+                        <span class="text-subtle text-lg font-mono mt-1">@</span> 
+                        <span class="link-underline">Kontakt aufnehmen</span>
+                        <span class="text-lg">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="w-full h-px bg-gray-300 my-24"></div>
+
+        <!-- Expert Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-4 lg:col-span-3">
+                <span class="font-mono text-xs uppercase tracking-widest text-subtle">Als Experte & Gast</span>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9">
+                <p class="text-lg font-light text-subtle mb-12 max-w-3xl">
+                    Eine kleine Auswahl an Artikeln, Podcasts, Radio-Features und anderen Formaten, bei denen ich zu Wort kommen durfte.
+                </p>
+
+                <div class="space-y-12">
+                    <!-- Podcast -->
+                    <article class="group">
+                        <h3 class="font-display text-2xl font-semibold mb-2">
+                            <a href="http://skeleton-crew.de/na204_michael_foertsch/" target="_blank" class="link-underline">Natürliche Ausrede: Über KI-Kunst</a>
+                        </h3>
+                        <p class="text-subtle leading-relaxed">
+                            Ein Gespräch über AI Bildgeneratoren wie Midjourney, Trainingsdaten, Fragen der Rechtsprechung und warum die auf Engagement getrimmten Sozialen Medien unter dem Einfluss von KI-Inhalten leiden könnten.
+                        </p>
+                    </article>
+
+                    <!-- Tagesschau -->
+                    <article class="group">
+                        <h3 class="font-display text-2xl font-semibold mb-2">
+                            <a href="https://archive.is/hvxnR" target="_blank" class="link-underline">Tagesschau: Klimaoptimismus</a>
+                        </h3>
+                        <p class="text-subtle leading-relaxed">
+                            Dem düsteren Blick in die Zukunft hält das Genre Solarpunk etwas entgegen: Es schafft in Kunst und Literatur eine Zukunft, in der es sich zu leben lohnt.
+                        </p>
+                    </article>
+
+                    <!-- NDR -->
+                    <article class="group">
+                        <h3 class="font-display text-2xl font-semibold mb-2">
+                            <a href="https://www.ndr.de/nachrichten/netzwelt/computer,computer2515.html" target="_blank" class="link-underline">NDR Info: Wem gehört die Kunst?</a>
+                        </h3>
+                        <p class="text-subtle leading-relaxed">
+                            Werke durch Künstliche Intelligenz: Ein Radio-Feature über Urheberrecht, Kreativität und die Frage, ob Maschinen Künstler sein können.
+                        </p>
+                    </article>
+
+                    <!-- Insert Moin -->
+                    <article class="group">
+                        <h3 class="font-display text-2xl font-semibold mb-2">
+                            <a href="https://www.patreon.com/posts/le-brunch-co-wie-78969217" target="_blank" class="link-underline">Insert Moin: KI & die Gamesbranche</a>
+                        </h3>
+                        <p class="text-subtle leading-relaxed">
+                            Le Brunch Podcast: Wie ChatGPT und der KI-Fortschritt die Entwicklung und das Spielen von Videospielen verändern wird.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="w-full h-px bg-gray-300 my-24"></div>
+
+        <!-- Social Web Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-4 lg:col-span-3">
+                <span class="font-mono text-xs uppercase tracking-widest text-subtle">Social Web</span>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+                    <a href="https://x.com/micha" target="_blank" class="group">
+                        <h3 class="font-display text-2xl font-semibold mb-1 hover:text-subtle transition-colors">Twitter / X ↗</h3>
+                    </a>
+                    <a href="https://bsky.app/profile/micha.bsky.social" target="_blank" class="group">
+                        <h3 class="font-display text-2xl font-semibold mb-1 hover:text-subtle transition-colors">Bluesky ↗</h3>
+                    </a>
+                    <a href="https://www.flickr.com/photos/zufallsfaktor/" target="_blank" class="group">
+                        <h3 class="font-display text-2xl font-semibold mb-1 hover:text-subtle transition-colors">Flickr ↗</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end">
+            <p class="text-xs text-subtle font-mono">
+                © 2024 Michael Förtsch<br>Based in Germany.
+            </p>
+            <a href="impressum.html" class="mt-4 md:mt-0 text-sm font-bold uppercase hover:opacity-60">Impressum</a>
+        </div>
+    </footer>
+
+</body>
+</html>

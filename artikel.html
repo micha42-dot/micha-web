@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Förtsch | Artikel & Arbeit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'], }, colors: { 'paper': '#F5F5F2', 'ink': '#1A1A1A', 'subtle': '#6B7280', } } } }
+    </script>
+    <style> body { background-color: #F5F5F2; color: #1A1A1A; -webkit-font-smoothing: antialiased; } .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease-in-out; } .group:hover .link-underline { background-size: 100% 2px; } </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50">
+        <a href="index.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+            <li><a href="artikel.html" class="text-ink border-b-2 border-black pb-1">Artikel & Arbeit</a></li>
+            <li><a href="fotos.html" class="hover:text-ink transition-colors">Fotos</a></li>
+            <li><a href="ki.html" class="hover:text-ink transition-colors">KI</a></li>
+            <li><a href="projekte.html" class="hover:text-ink transition-colors">Projekte</a></li>
+            <li><a href="ueber.html" class="hover:text-ink transition-colors">Über</a></li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full">
+        <h1 class="font-display text-5xl md:text-7xl font-bold mb-4">Artikel & Arbeit.</h1>
+        <p class="text-lg text-subtle mb-24 max-w-2xl">Eine kuratierte Auswahl an Texten, Recherchen und Audio-Produktionen.</p>
+
+        <!-- SECTION: ARTIKEL -->
+        <section class="mb-32">
+            <div class="flex items-baseline justify-between mb-12 border-b border-gray-300 pb-4">
+                <h2 class="font-display text-3xl font-bold">Artikel.</h2>
+                <span class="font-mono text-xs uppercase tracking-widest text-subtle hidden md:inline-block">Text & Redaktion</span>
+            </div>
+
+            <div class="flex flex-col gap-12">
+                
+                <!-- DeepSeek -->
+                <article class="group grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazin</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/was-du-%C3%BCber-deepseek-wissen-musst-chinas-open-source-ki-erschreckt-das-silicon-valley" target="_blank" class="link-underline">Was du über DeepSeek wissen musst</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Chinas Open-Source-KI erschreckt das Silicon Valley. Wie ein Startup mit einem Bruchteil der Kosten amerikanische Tech-Giganten wie OpenAI herausfordert.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2025</div>
+                </article>
+
+                <!-- David Lynch -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">Games.ch</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.games.ch/features/artikel/verspaetete-erinnerung-muje/preview/" target="_blank" class="link-underline">Ab in surreale Welten</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Nachruf auf David Lynch. Wir haben einige der "lynchigsten" Games zusammengetragen, um uns an den Mann mit den wilden Haaren und dem Einfluss auf Twin Peaks und Co. zu erinnern.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2025</div>
+                </article>
+
+                <!-- Métal Hurlant -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazin</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/m%C3%A9tal-hurlant-wie-franz%C3%B6sische-comic-zeichner-vor-50-jahren-die-zukunft-erfanden" target="_blank" class="link-underline">Métal Hurlant: Wie Comic-Zeichner die Zukunft erfanden</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Vor 50 Jahren startete das Magazin, ohne das es Blade Runner oder Star Wars vielleicht nie gegeben hätte. Ein Blick auf die französischen Visionäre.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2024</div>
+                </article>
+
+                <!-- Alien Romulus -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">Rolling Stone</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.rollingstone.de/alien-romulus-alvarez-interview-2779155" target="_blank" class="link-underline">„Alien: Romulus“-Regisseur Fede Alvarez</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Im Interview erklärt Alvarez, warum H.R. Giger stolz wäre und wie er das totgesagte „Alien“-Universum wiederbeleben will.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2024</div>
+                </article>
+
+                <!-- V - Die Besucher -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazin</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/der-science-fiction-klassiker-v-darum-ist-die-80er-jahre-serie-heute-relevanter-denn-je" target="_blank" class="link-underline">Der Science-Fiction-Klassiker V</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Darum ist die 80er-Jahre-Serie über faschistische Aliens heute relevanter denn je. Ein popkulturelles Artefakt unter der Lupe.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2024</div>
+                </article>
+
+                <!-- Ong's Hat -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazin</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://1e9.community/t/der-vielleicht-aelteste-internet-mythos-ueberhaupt-das-mysterium-von-ong-s-hat/19698" target="_blank" class="link-underline">Das Mysterium von Ong’s Hat</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Der vielleicht älteste Internet-Mythos überhaupt. Ein narratives Experiment aus den 80ern über Dimensionstore, das außer Kontrolle geriet.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">Archiv</div>
+                </article>
+
+                <!-- Philip K. Dick -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazin</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/die-merkw%C3%BCrdigen-visionen-der-science-fiction-ikone-philip-k-dick" target="_blank" class="link-underline">Die Visionen des Philip K. Dick</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Er zweifelte an der Realität und glaubte, seine Romane kämen von Aliens. Zum 40. Todestag einer Ikone, die Matrix und Co. erst möglich machte.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2022</div>
+                </article>
+
+                <!-- Cloud Gaming -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">Wasted</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://wasted.de/2022/11/alles-wolkig-oder-was-eine-kleine-geschichte-des-cloud-gamings/" target="_blank" class="link-underline">Alles wolkig, oder was?</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Eine kleine Geschichte des Cloud Gamings. Wo kommt die Idee her und was hat Nvidia damit zu tun?
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2022</div>
+                </article>
+
+                <!-- Deepfakes -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazin</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://1e9.community/t/wie-ich-in-nur-zwei-wochen-gelernt-habe-eigene-deepfakes-zu-produzieren/3494" target="_blank" class="link-underline">Selbstversuch: Deepfakes</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Wie ich in nur zwei Wochen gelernt habe, eigene Deepfakes zu produzieren. Ein Report über die Gefahren und die überraschende Einfachheit der Technik.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">Archiv</div>
+                </article>
+
+                <!-- Projekt Daedalus -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazin</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/projekt-daedalus-wie-uns-ein-fusions-raumschiff-in-ein-anderes-sonnensystem-bomben-sollte" target="_blank" class="link-underline">Projekt Daedalus</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Wie uns ein Fusions-Raumschiff in ein anderes Sonnensystem bomben sollte. Die Geschichte eines megalomanischen Plans aus den 1970ern.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">Archiv</div>
+                </article>
+
+                <!-- Stalker -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">PC Games</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.pcgames.de/Stalker-Shadow-of-Chernobyl-Spiel-34605/Specials/Zehn-Jahre-Stalker-1225672/" target="_blank" class="link-underline">Stalker wird zehn</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Von Robo-Hühnern, Schlapphüten und einem Picknick am Wegesrand. Die chaotische Entstehungsgeschichte des Kult-Shooters aus der Ukraine.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2017</div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION: PODCASTS & RADIO -->
+        <section>
+            <div class="flex items-baseline justify-between mb-12 border-b border-gray-300 pb-4">
+                <h2 class="font-display text-3xl font-bold">Podcasts & Radio.</h2>
+                <span class="font-mono text-xs uppercase tracking-widest text-subtle hidden md:inline-block">Audio & Voice</span>
+            </div>
+
+             <div class="flex flex-col gap-12">
+                
+                <!-- Die Elon Musk Story -->
+                <article class="group grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">WDR / 1Live</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.ardaudiothek.de/sendung/1live-die-elon-musk-story/urn:ard:show:54d819d5fb6a8835/" target="_blank" class="link-underline">Die Elon Musk Story</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed mb-4">
+                            Was ist eigentlich mit Elon Musk los? Einst Visionär, heute der reichste Rüpel der Welt. Er verbreitet Verschwörungstheorien und nutzt seine Macht auf unrühmliche Weise.
+                        </p>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Gemeinsam mit Klaus Uhrig, Christian Schiffer und Sarah Kriesche habe ich mehrere Monate recherchiert, Wegbegleiter befragt und die Erkenntnisse in diese Podcast-Serie gegossen.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">Podcast-Serie</div>
+                </article>
+
+                <!-- Hyperloop -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">ARD / BR</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.ardaudiothek.de/episode/urn:ard:episode:52f758b8f86d73ea/" target="_blank" class="link-underline">Hyperloop: Mobilität der Zukunft oder Rohrkrepierer?</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Es klingt nach Science-Fiction: In einer Kapsel sollen Menschen mit 900 km/h durch eine Röhre geschossen werden. Wird die Rohrpost bald Flugzeuge ersetzen? Ein Feature von Christian Schiffer und Michael Förtsch.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">Radio-Feature</div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto">
+        <p class="text-xs text-subtle font-mono">© 2024 Michael Förtsch</p>
+    </footer>
+</body>
+</html>

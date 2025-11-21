@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Förtsch | Impressum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'], }, colors: { 'paper': '#F5F5F2', 'ink': '#1A1A1A', 'subtle': '#6B7280', } } } }
+    </script>
+    <style> body { background-color: #F5F5F2; color: #1A1A1A; -webkit-font-smoothing: antialiased; } .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease-in-out; } .group:hover .link-underline { background-size: 100% 2px; } </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50">
+        <a href="index.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+            <li><a href="artikel.html" class="hover:text-ink transition-colors">Artikel & Arbeit</a></li>
+            <li><a href="fotos.html" class="hover:text-ink transition-colors">Fotos</a></li>
+            <li><a href="ki.html" class="hover:text-ink transition-colors">KI</a></li>
+            <li><a href="projekte.html" class="hover:text-ink transition-colors">Projekte</a></li>
+            <li><a href="ueber.html" class="hover:text-ink transition-colors">Über</a></li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full">
+        <h1 class="font-display text-5xl md:text-7xl font-bold mb-12">Impressum.</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 text-subtle font-light leading-relaxed">
+            <div class="md:col-span-8 lg:col-span-6 space-y-8">
+                
+                <section>
+                    <h2 class="text-ink font-bold text-lg mb-2">Angaben gemäß § 5 TMG</h2>
+                    <p>
+                        Michael Förtsch<br>
+                        Freier Journalist<br>
+                        [Musterstraße 1]<br>
+                        [12345 Musterstadt]
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-ink font-bold text-lg mb-2">Kontakt</h2>
+                    <p>
+                        E-Mail: redaktionsbuero.foertsch [at] gmail.com<br>
+                        <!-- Telefon: [Deine Telefonnummer] -->
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-ink font-bold text-lg mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+                    <p>
+                        Michael Förtsch<br>
+                        [Musterstraße 1]<br>
+                        [12345 Musterstadt]
+                    </p>
+                </section>
+
+                <div class="w-full h-px bg-gray-300 my-8"></div>
+
+                <section class="text-sm space-y-4">
+                    <h3 class="text-ink font-bold">Haftung für Inhalte</h3>
+                    <p>
+                        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                    </p>
+
+                    <h3 class="text-ink font-bold">Haftung für Links</h3>
+                    <p>
+                        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+                    </p>
+
+                    <h3 class="text-ink font-bold">Urheberrecht</h3>
+                    <p>
+                        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+                    </p>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto">
+        <p class="text-xs text-subtle font-mono">© 2024 Michael Förtsch</p>
+    </footer>
+</body>
+</html>
