@@ -1,6 +1,8 @@
 # Michael Förtsch - Minimalistisches Portfolio
 
-Dies ist eine extrem simple, schnelle und wartungsarme Portfolio-Seite, basierend auf deinen Anforderungen:
+Dies ist eine extrem simple, schnelle und wartungsarme Portfolio-Seite, die aus einem Experiment mit Gemini 3 Pro enstand. Sie ist zum Teil also KI-generiert, zum Teil händisch nachgebessert, da Gemini teils absurde Fehler machte.
+Ich teile sie hier. Wer mag, kann basierend darauf eine eigene Seite erstellen.
+
 - **Kein React**, kein Build-Prozess.
 - **Nur HTML-Dateien** für die gesamte Website.
 - Design: "Dezenter" als die Vorlage. Helle Papier-Töne statt grellem Gelb, Fokus auf Typografie.
