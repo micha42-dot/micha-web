@@ -24,6 +24,12 @@ dein-projekt-ordner/
 └── graphics/        <-- DIESEN ORDNER MUSST DU ERSTELLEN!
     │
     ├── portrait-bg.jpg      (Hintergrundbild Startseite oben, blass)
+    ├── artikel-bg.jpg       (Hintergrundbild Artikel-Seite)
+    ├── fotos-bg.jpg         (Hintergrundbild Foto-Seite)
+    ├── ki-bg.jpg            (Hintergrundbild KI-Seite)
+    ├── projekte-bg.jpg      (Hintergrundbild Projekte-Seite)
+    ├── ueber-bg.jpg         (Hintergrundbild Über-Seite)
+    │
     ├── portrait.jpg         (Dein Profilbild für die Über-Seite)
     ├── email.jpg            (Bild deiner E-Mail Adresse für Spam-Schutz)
     │
@@ -46,7 +52,7 @@ dein-projekt-ordner/
     └── ki-12.jpg            (KI Bild 12)
 ```
 
-Wenn die Bilder im Ordner `graphics` fehlen, lädt die Seite automatisch Platzhalter-Bilder aus dem Internet (Unsplash), damit das Layout nicht kaputt geht. Sobald du deine eigenen Bilder mit den richtigen Namen in den Ordner legst, werden diese angezeigt.
+Wenn die Bilder im Ordner `graphics` fehlen, wird an der Stelle ein "Broken Image" Icon angezeigt, da wir die Fallback-Bilder aus dem Internet entfernt haben.
 
 ## Wie man das online bringt (GitHub Pages)
 

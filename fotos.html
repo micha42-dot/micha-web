@@ -17,10 +17,16 @@
         .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease-in-out; } .link-underline:hover { background-size: 100% 2px; }
     </style>
 </head>
-<body class="antialiased flex flex-col min-h-screen">
-    <!-- Portfolio Version 2025 - Update -->
+<body class="antialiased flex flex-col min-h-screen relative">
+    <!-- Background Image Container -->
+    <div class="absolute top-0 left-0 w-full h-[85vh] z-0 overflow-hidden pointer-events-none">
+        <img src="graphics/fotos-bg.jpg" 
+             alt="Background" 
+             class="w-full h-full object-cover opacity-40 mix-blend-multiply object-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#F5F5F2]/10 to-[#F5F5F2]"></div>
+    </div>
 
-    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50">
+    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50 relative">
         <a href="index.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
         <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
             <li><a href="artikel.html" class="hover:text-ink transition-colors">Artikel & Arbeit</a></li>
@@ -31,7 +37,7 @@
         </ul>
     </nav>
 
-    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full">
+    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full relative z-10">
         <h1 class="font-display text-5xl md:text-7xl font-bold mb-8">Visuelles.</h1>
         <p class="text-lg text-subtle mb-16 max-w-2xl">
             Momente aus der analogen und digitalen Welt.
@@ -49,7 +55,7 @@
                 </div>
                 <div class="flex justify-between items-baseline">
                     <span class="font-mono text-xs text-subtle uppercase tracking-widest">01 — Urban</span>
-                    <span class="font-sans text-sm font-medium">Nacht in Neon</span>
+                    <span class="font-sans text-sm font-medium">Millennium Bridge, London</span>
                 </div>
             </div>
             
@@ -61,8 +67,8 @@
                          class="img-zoom object-cover w-full h-full" loading="lazy">
                 </div>
                 <div class="flex justify-between items-baseline">
-                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">02 — Struktur</span>
-                    <span class="font-sans text-sm font-medium">Tokyo Tower</span>
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">02 — Architektur</span>
+                    <span class="font-sans text-sm font-medium">Kirche Seliger Pater Rupert Mayer, Poing</span>
                 </div>
             </div>
 
@@ -74,8 +80,8 @@
                          class="img-zoom object-cover w-full h-full" loading="lazy">
                 </div>
                  <div class="flex justify-between items-baseline">
-                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">03 — Tech</span>
-                    <span class="font-sans text-sm font-medium">Interface Dreams</span>
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">03 — Vibe</span>
+                    <span class="font-sans text-sm font-medium">Dämmerung</span>
                 </div>
             </div>
 
@@ -87,8 +93,8 @@
                          class="img-zoom object-cover w-full h-full" loading="lazy">
                 </div>
                 <div class="flex justify-between items-baseline">
-                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">04 — Code</span>
-                    <span class="font-sans text-sm font-medium">Terminal</span>
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">04 — Szene</span>
+                    <span class="font-sans text-sm font-medium">Botanischer Garten, München</span>
                 </div>
             </div>
 
@@ -100,8 +106,8 @@
                          class="img-zoom object-cover w-full h-full" loading="lazy">
                 </div>
                  <div class="flex justify-between items-baseline">
-                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">05 — Architektur</span>
-                    <span class="font-sans text-sm font-medium">Betonwüste</span>
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">05 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Steve Wozniak</span>
                 </div>
             </div>
 
@@ -113,8 +119,8 @@
                          class="img-zoom object-cover w-full h-full" loading="lazy">
                 </div>
                  <div class="flex justify-between items-baseline">
-                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">06 — Abstract</span>
-                    <span class="font-sans text-sm font-medium">Light Leaks</span>
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">06 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Charles Schumann</span>
                 </div>
             </div>
             
@@ -126,8 +132,8 @@
                          class="img-zoom object-cover w-full h-full" loading="lazy">
                 </div>
                  <div class="flex justify-between items-baseline">
-                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">07 — Sci-Fi</span>
-                    <span class="font-sans text-sm font-medium">Cybernetics</span>
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">07 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Harald Lesch</span>
                 </div>
             </div>
 
@@ -139,8 +145,114 @@
                          class="img-zoom object-cover w-full h-full" loading="lazy">
                 </div>
                  <div class="flex justify-between items-baseline">
-                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">08 — Arbeit</span>
-                    <span class="font-sans text-sm font-medium">Setup</span>
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">08 — Urban</span>
+                    <span class="font-sans text-sm font-medium">New York</span>
+                </div>
+            </div>
+
+            <!-- NEUE BILDER (9-16) -->
+
+            <!-- 9. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-09.jpg" 
+                         alt="Foto 09" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">09 — Urban</span>
+                    <span class="font-sans text-sm font-medium">London</span>
+                </div>
+            </div>
+
+            <!-- 10. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-10.jpg" 
+                         alt="Foto 10" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">10 — Struktur</span>
+                    <span class="font-sans text-sm font-medium">Silo, Grub</span>
+                </div>
+            </div>
+
+            <!-- 11. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-11.jpg" 
+                         alt="Foto 11" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">11 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Fede Alvarez</span>
+                </div>
+            </div>
+
+            <!-- 12. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-12.jpg" 
+                         alt="Foto 12" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">12 — Natur</span>
+                    <span class="font-sans text-sm font-medium">Feld bei Nacht</span>
+                </div>
+            </div>
+
+            <!-- 13. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-13.jpg" 
+                         alt="Foto 13" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">13 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">"Slaviana"</span>
+                </div>
+            </div>
+
+            <!-- 14. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-14.jpg" 
+                         alt="Foto 14" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">14 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Felix Cremerius</span>
+                </div>
+            </div>
+
+            <!-- 15. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-15.jpg" 
+                         alt="Foto 15" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">15 — Architektur</span>
+                    <span class="font-sans text-sm font-medium">Southwark Cathedral, London</span>
+                </div>
+            </div>
+
+            <!-- 16. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-16.jpg" 
+                         alt="Foto 16" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">16 — Struktur</span>
+                    <span class="font-sans text-sm font-medium">Installation</span>
                 </div>
             </div>
 
@@ -161,7 +273,7 @@
         </section>
 
     </main>
-     <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto">
+     <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto relative z-10">
         <div class="flex flex-col md:flex-row justify-between items-end mb-8">
             <p class="text-xs text-subtle font-mono">
                 © 2025 Michael Förtsch<br>Based in Germany.
