@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkkiste - Just Simple Bookmarking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Arial', 'Helvetica', 'sans-serif'],
+            },
+            colors: {
+              app: {
+                blue: '#3366cc',
+                green: '#8cc63f',
+                gray: '#f2f2f2',
+                text: '#333333',
+                meta: '#999999',
+                border: '#e2e2e2'
+              }
+            },
+            boxShadow: {
+              'sharp': '0 1px 0 0 rgba(0,0,0,0.1)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: white;
+        color: #333;
+      }
+      a {
+        color: #3366cc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white min-h-screen font-sans selection:bg-app-blue selection:text-white flex flex-col">
+    
+    <!-- Header -->
+    <header class="bg-white py-4 border-b border-app-border sticky top-0 z-50">
+      <div class="max-w-[960px] mx-auto px-4 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-end gap-2 group cursor-pointer no-underline">
+          <div class="flex gap-1 mb-1">
+            <div class="w-6 h-6 bg-black group-hover:bg-app-text transition-colors"></div>
+            <div class="w-6 h-6 bg-app-blue group-hover:bg-[#2850a7] transition-colors"></div>
+          </div>
+          <span class="text-2xl font-bold text-black tracking-tight leading-none">
+            linkkiste
+          </span>
+        </a>
+        
+        <!-- Nav -->
+        <nav class="flex items-center gap-5 text-sm font-bold">
+          <a href="installation.html" class="flex items-center gap-1.5 bg-[#f0f0f0] border border-[#999] border-b-[#666] border-r-[#666] px-3 py-1 text-xs text-[#333] hover:bg-[#e8e8e8] active:border-[#666] active:border-b-[#999] active:border-r-[#999] active:translate-y-px font-sans no-underline cursor-pointer" title="Install Application">
+             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" class="mt-px">
+              <path d="M12 3v13M5 10l7 7 7-7"/>
+            </svg>
+            INSTALLATION
+          </a>
+        </nav>
+      </div>
+    </header>
+      
+    <main class="flex-grow">
+      <!-- Hero -->
+      <section class="pt-24 pb-20 px-4">
+        <div class="max-w-[800px] mx-auto text-center">
+          
+          <h1 class="text-4xl md:text-5xl font-bold text-app-text mb-6 tracking-tight">
+            Your Bookmarks.<br />
+            <span class="text-app-blue">Simply Sorted.</span>
+          </h1>
+          
+          <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Save links like it's 2004. Fast, text-based, and without algorithmic clutter.
+          </p>
+
+          <!-- Primary CTA -->
+          <div class="flex justify-center mb-12">
+             <a href="https://github.com/micha42-dot/Linkkiste_Bookmarks" target="_blank" rel="noopener noreferrer" class="bg-app-green text-white font-bold px-10 py-4 text-base uppercase hover:bg-[#7ab332] transition-colors shadow-sm inline-flex items-center gap-3 border-b-2 border-[#6ea02e]">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                Get it on GitHub
+              </a>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex justify-center gap-2 opacity-70">
+              <span class="bg-white border border-gray-300 px-2 py-0.5 text-xs text-app-meta">minimalism</span>
+              <span class="bg-white border border-gray-300 px-2 py-0.5 text-xs text-app-meta">productivity</span>
+              <span class="bg-white border border-gray-300 px-2 py-0.5 text-xs text-app-meta">speed</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="py-16 border-t border-app-border bg-white">
+        <div class="max-w-[1100px] mx-auto px-4">
+          
+          <!-- Tab-like separator -->
+          <div class="flex items-center gap-4 mb-12">
+              <span class="bg-app-blue text-white px-3 py-1 font-bold text-sm">Features</span>
+              <span class="h-px bg-app-border flex-1"></span>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Feature Box 1 -->
+            <div class="h-full flex flex-col">
+              <h3 class="bg-app-green text-white px-4 py-2 font-bold text-sm uppercase shadow-sm">
+                Privacy & Data Sovereignty
+              </h3>
+              <div class="bg-app-gray/30 border-l border-r border-b border-app-border p-4 flex-grow">
+                <ul class="space-y-3">
+                  <li class="flex flex-col">
+                    <span class="text-app-blue font-bold text-sm">Self-Hosted Approach</span>
+                    <span class="text-xs text-gray-600 mt-1">Your data resides in your own (free) Supabase project. You have full control over the database.</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">Single-User Design</span>
+                    <span class="text-xs text-gray-600 mt-1">Your personal, private library. Perfect for just you or a small group of friends. No social feeds, no public profiles.</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">No Tracking</span>
+                    <span class="text-xs text-gray-600 mt-1">The app doesn't track your behavior and doesn't sell your data.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Feature Box 2 -->
+            <div class="h-full flex flex-col">
+              <h3 class="bg-app-green text-white px-4 py-2 font-bold text-sm uppercase shadow-sm">
+                Organization & Structure
+              </h3>
+              <div class="bg-app-gray/30 border-l border-r border-b border-app-border p-4 flex-grow">
+                 <ul class="space-y-3">
+                  <li class="flex flex-col">
+                    <span class="text-app-blue font-bold text-sm">Tagging System</span>
+                    <span class="text-xs text-gray-600 mt-1">Organize links with flat tags. Includes a visual "Tag Cloud" for frequently used terms.</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">Folder Structure</span>
+                    <span class="text-xs text-gray-600 mt-1">Sort links into folders to bundle projects or topics.</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">Full-Text Search & Filters</span>
+                    <span class="text-xs text-gray-600 mt-1">Find bookmarks instantly via title, URL, description, tags, or folder names.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Feature Box 3 -->
+            <div class="h-full flex flex-col">
+              <h3 class="bg-app-green text-white px-4 py-2 font-bold text-sm uppercase shadow-sm">
+                Bookmark Management
+              </h3>
+              <div class="bg-app-gray/30 border-l border-r border-b border-app-border p-4 flex-grow">
+                 <ul class="space-y-3">
+                  <li class="flex flex-col">
+                    <span class="text-app-blue font-bold text-sm">Auto-Fill</span>
+                    <span class="text-xs text-gray-600 mt-1">Title and description are automatically fetched from the target page when adding links.</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">Read Later & Notes</span>
+                    <span class="text-xs text-gray-600 mt-1">Mark articles as "Unread" for later and add personal notes to any bookmark.</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">Flashback</span>
+                    <span class="text-xs text-gray-600 mt-1">"On this day" feature shows bookmarks you saved on this date in previous years.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+             <!-- Feature Box 4 -->
+            <div class="h-full flex flex-col">
+              <h3 class="bg-app-green text-white px-4 py-2 font-bold text-sm uppercase shadow-sm">
+                Design & Usability
+              </h3>
+              <div class="bg-app-gray/30 border-l border-r border-b border-app-border p-4 flex-grow">
+                 <ul class="space-y-3">
+                  <li class="flex flex-col">
+                    <span class="text-app-blue font-bold text-sm">Retro Interface</span>
+                    <span class="text-xs text-gray-600 mt-1">Minimalist design, inspired by the golden era of social bookmarking (del.icio.us).</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">Responsive & PWA</span>
+                    <span class="text-xs text-gray-600 mt-1">Works perfectly on desktop and mobile. Installable as a native-like app.</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">No Dark Patterns</span>
+                    <span class="text-xs text-gray-600 mt-1">No popups, no ads, no distractions. Just your content.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+             <!-- Feature Box 5 -->
+            <div class="h-full flex flex-col">
+              <h3 class="bg-app-green text-white px-4 py-2 font-bold text-sm uppercase shadow-sm">
+                Security & Backup
+              </h3>
+              <div class="bg-app-gray/30 border-l border-r border-b border-app-border p-4 flex-grow">
+                 <ul class="space-y-3">
+                  <li class="flex flex-col">
+                    <span class="text-app-blue font-bold text-sm">Full Export</span>
+                    <span class="text-xs text-gray-600 mt-1">Your data belongs to you. Export your entire library as CSV, XML, or SQL.</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">Backup Reminder</span>
+                    <span class="text-xs text-gray-600 mt-1">Automatically reminds you if you haven't downloaded a backup in a while.</span>
+                  </li>
+                  <li class="flex flex-col pt-3 border-t border-gray-200">
+                    <span class="text-app-blue font-bold text-sm">Secure Authentication</span>
+                    <span class="text-xs text-gray-600 mt-1">Login and registration are handled via secure industry standards (Supabase Auth).</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white border-t border-app-border py-8">
+      <div class="max-w-[960px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs text-app-meta">
+        <div>
+          <span class="font-bold text-gray-500">Linkkiste</span> &copy; <script>document.write(new Date().getFullYear())</script>
+        </div>
+        <div class="flex gap-4 mt-2 md:mt-0">
+            <a href="https://michaelfoertsch.de/impressum.html" class="hover:text-app-blue hover:underline">Impressum</a>
+        </div>
+      </div>
+    </footer>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

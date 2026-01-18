@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkkiste - Installation Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Arial', 'Helvetica', 'sans-serif'],
+            },
+            colors: {
+              app: {
+                blue: '#3366cc',
+                green: '#8cc63f',
+                gray: '#f2f2f2',
+                text: '#333333',
+                meta: '#999999',
+                border: '#e2e2e2'
+              }
+            },
+            boxShadow: {
+              'sharp': '0 1px 0 0 rgba(0,0,0,0.1)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: white;
+        color: #333;
+      }
+      a {
+        color: #3366cc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body class="bg-white min-h-screen flex flex-col font-sans selection:bg-app-blue selection:text-white">
+    
+    <!-- Header -->
+    <header class="bg-white py-4 border-b border-app-border sticky top-0 z-50">
+      <div class="max-w-[960px] mx-auto px-4 flex items-center justify-between">
+        <a href="index.html" class="flex items-end gap-2 group cursor-pointer no-underline">
+          <div class="flex gap-1 mb-1">
+            <div class="w-6 h-6 bg-black group-hover:bg-app-text transition-colors"></div>
+            <div class="w-6 h-6 bg-app-blue group-hover:bg-[#2850a7] transition-colors"></div>
+          </div>
+          <span class="text-2xl font-bold text-black tracking-tight leading-none">
+            linkkiste
+          </span>
+        </a>
+        <nav class="flex items-center gap-5 text-sm font-bold">
+            <!-- Active State representation -->
+            <span class="flex items-center gap-1.5 bg-[#e8e8e8] border border-[#666] border-b-[#999] border-r-[#999] px-3 py-1 text-xs text-[#333] font-sans cursor-default translate-y-px">
+             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" class="mt-px">
+              <path d="M12 3v13M5 10l7 7 7-7"/>
+            </svg>
+            INSTALLATION
+          </span>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <div class="max-w-[800px] mx-auto px-4 pt-12 pb-20">
+          
+          <!-- Title & Intro -->
+          <div class="mb-12 border-b border-app-border pb-8">
+              <a href="index.html" class="text-app-blue text-sm hover:underline mb-4 block">&larr; Back to Home</a>
+              <h1 class="text-4xl font-bold text-app-text mb-4 tracking-tight">Installation Guide</h1>
+              <p class="text-xl text-gray-600">LinkKiste is a private, single-user bookmarking application.</p>
+          </div>
+
+          <div class="prose prose-sm max-w-none text-gray-700 mb-12 font-sans">
+              <p class="mb-4 text-base">Because it is "serverless" (React + Supabase), you don't need a complex server to run it. You need two things:</p>
+              <ul class="list-none space-y-2 mb-6 border-l-4 border-app-blue bg-blue-50 py-4 pr-4 pl-4">
+                  <li><strong>The Database:</strong> A free project on Supabase.com.</li>
+                  <li><strong>The Website:</strong> Hosted on Vercel, Cloudflare Pages, or your own web server.</li>
+              </ul>
+
+               <div class="bg-yellow-50 border border-yellow-200 p-4 text-sm text-yellow-900 mb-8 rounded-sm">
+                  <strong class="block mb-1 text-yellow-800">Important: Handling API Keys</strong>
+                  The public source code contains placeholder addresses (like placeholder.supabase.co). You do not need to edit the code files. Instead, you will provide your real API keys using Environment Variables during the deployment process.
+              </div>
+          </div>
+
+          <!-- Section 1 -->
+          <div class="mb-16">
+              <h3 class="bg-app-green text-white px-4 py-2 font-bold text-lg uppercase shadow-sm mb-6 inline-block">
+                  Part 1: Database Setup (Supabase)
+              </h3>
+              <div class="text-gray-700 text-sm leading-relaxed">
+                   <p class="mb-4">Before deploying the app, you must set up the backend.</p>
+                   <ol class="list-decimal pl-5 space-y-4 mb-6">
+                      <li>Create a free account and a new project at <a href="https://supabase.com" target="_blank" class="text-app-blue hover:underline font-bold">Supabase.com</a>.</li>
+                      <li>Once your project is ready, go to the <strong>SQL Editor</strong> (on the left sidebar).</li>
+                      <li>Paste the following SQL code and click <strong>Run</strong>. This creates the database structure and ensures only you can see your data:</li>
+                   </ol>
+
+                   <!-- SQL Code Block -->
+                   <div class="my-6 border border-gray-300 bg-gray-50 text-xs font-mono overflow-x-auto p-4 leading-normal">
+<pre class="whitespace-pre">-- 1. Create the bookmarks table
+create table bookmarks (
+  id bigint generated by default as identity primary key,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  url text not null,
+  title text not null,
+  description text,
+  tags text[] default '{}',
+  folders text[] default '{}',
+  notes text,
+  to_read boolean default false,
+  user_id uuid references auth.users not null default auth.uid()
+);
+
+-- 2. Enable Security (Row Level Security)
+alter table bookmarks enable row level security;
+
+-- 3. Create Access Policies (Only the owner can see/edit their data)
+create policy "Users can only see their own bookmarks" on bookmarks for select using (auth.uid() = user_id);
+create policy "Users can insert their own bookmarks" on bookmarks for insert with check (auth.uid() = user_id);
+create policy "Users can update their own bookmarks" on bookmarks for update using (auth.uid() = user_id);
+create policy "Users can delete their own bookmarks" on bookmarks for delete using (auth.uid() = user_id);
+
+-- 4. Setup Image Storage for Avatars
+insert into storage.buckets (id, name, public) values ('avatars', 'avatars', true);
+create policy "Avatar images are publicly accessible" on storage.objects for select using ( bucket_id = 'avatars' );
+create policy "Anyone can upload an avatar" on storage.objects for insert with check ( bucket_id = 'avatars' AND auth.role() = 'authenticated' );</pre>
+                   </div>
+
+                   <div class="mt-8 grid md:grid-cols-2 gap-8">
+                      <div>
+                          <h4 class="font-bold text-black mb-2">Get your Credentials:</h4>
+                          <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                              <li>Go to <strong>Project Settings (gear icon) -> API</strong>.</li>
+                              <li>Copy the <strong>Project URL</strong>.</li>
+                              <li>Copy the <strong>anon public key</strong>.</li>
+                              <li>Keep these safe, you will need them in Part 2.</li>
+                          </ul>
+                      </div>
+                      <div>
+                           <h4 class="font-bold text-black mb-2">Make it Private (Optional):</h4>
+                          <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                              <li>Go to <strong>Authentication -> Providers -> Email</strong>. Disable "Confirm email".</li>
+                              <li>Create your account by logging into your new app later.</li>
+                              <li>After registration, go to <strong>Authentication -> Settings</strong> and disable "Allow new users to sign up".</li>
+                          </ul>
+                      </div>
+                   </div>
+              </div>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="mb-12">
+               <h3 class="bg-app-green text-white px-4 py-2 font-bold text-lg uppercase shadow-sm mb-6 inline-block">
+                  Part 2: Deployment
+              </h3>
+               <p class="mb-6 text-sm text-gray-700">Choose one of the following methods. Vercel is usually the easiest for React apps.</p>
+
+               <div class="space-y-6">
+                  
+                  <!-- Option A -->
+                  <div class="border border-app-border p-6 bg-white hover:shadow-sharp transition-shadow">
+                      <h4 class="font-bold text-lg mb-4 text-app-blue">Option A: Install on Vercel (Recommended)</h4>
+                      <ol class="list-decimal pl-5 space-y-2 text-sm text-gray-700">
+                          <li>Fork the LinkKiste repository to your GitHub account.</li>
+                          <li>Log in to Vercel and click "Add New Project".</li>
+                          <li>Select your GitHub repository.</li>
+                          <li>In the "Configure Project" section, find <strong>Environment Variables</strong>.</li>
+                          <li>Add these two variables:
+                              <div class="bg-gray-100 p-3 mt-2 border border-gray-200 font-mono text-xs">
+                                  <div>VITE_SUPABASE_URL = https://your-project.supabase.co</div>
+                                  <div class="mt-1">VITE_SUPABASE_ANON_KEY = your-long-anon-key-string</div>
+                              </div>
+                          </li>
+                          <li>Click <strong>Deploy</strong>.</li>
+                      </ol>
+                  </div>
+
+                  <!-- Option B -->
+                  <div class="border border-app-border p-6 bg-white hover:shadow-sharp transition-shadow">
+                      <h4 class="font-bold text-lg mb-4 text-app-blue">Option B: Install on Cloudflare Pages</h4>
+                      <ol class="list-decimal pl-5 space-y-2 text-sm text-gray-700">
+                          <li>Fork the LinkKiste repository to your GitHub account.</li>
+                          <li>Log in to the Cloudflare Dashboard and go to Workers & Pages.</li>
+                          <li>Click Create Application -> Pages -> Connect to Git.</li>
+                          <li>Select your repository.</li>
+                          <li><strong>Build Settings:</strong>
+                              <ul class="list-disc pl-5 mt-1 text-gray-600">
+                                  <li>Framework preset: Select Vite or React.</li>
+                                  <li>Build command: <code>npm run build</code></li>
+                                  <li>Output directory: <code>dist</code></li>
+                              </ul>
+                          </li>
+                          <li><strong>Environment Variables:</strong> Add <code>VITE_SUPABASE_URL</code> and <code>VITE_SUPABASE_ANON_KEY</code>.</li>
+                          <li>Click Save and Deploy.</li>
+                      </ol>
+                      <div class="mt-4 text-xs text-orange-900 bg-orange-50 p-3 border border-orange-200">
+                          <strong>Note:</strong> If you deploy first and then enter the Supabase credentials, you must re-deploy for the changes to take effect.
+                      </div>
+                  </div>
+
+                  <!-- Option C -->
+                  <div class="border border-app-border p-6 bg-white hover:shadow-sharp transition-shadow">
+                       <h4 class="font-bold text-lg mb-4 text-app-blue">Option C: Manual Hosting (Apache/Nginx)</h4>
+                       <p class="text-sm mb-3 text-gray-600">If you have your own web server (e.g., via FTP or SSH):</p>
+                       <ol class="list-decimal pl-5 space-y-2 text-sm text-gray-700">
+                          <li>Clone the repo to your local machine.</li>
+                          <li>Create a file named <code>.env</code> in the root folder and add your keys:
+                              <div class="bg-gray-100 p-2 mt-1 border border-gray-200 font-mono text-xs">
+                                  VITE_SUPABASE_URL=...<br>VITE_SUPABASE_ANON_KEY=...
+                              </div>
+                          </li>
+                          <li>Run <code>npm install</code> and then <code>npm run build</code>.</li>
+                          <li>Upload the contents of the <code>dist</code> folder to your web server.</li>
+                          <li><strong>Important:</strong> Configure your server for SPA (Single Page Application).</li>
+                       </ol>
+                       <div class="mt-4 grid md:grid-cols-2 gap-4">
+                          <div>
+                               <p class="text-xs font-bold text-gray-500 uppercase mb-1">For Apache (.htaccess)</p>
+                               <pre class="bg-gray-100 p-2 border border-gray-200 font-mono text-[10px] text-gray-600">RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]</pre>
+                          </div>
+                           <div>
+                               <p class="text-xs font-bold text-gray-500 uppercase mb-1">For Nginx</p>
+                               <pre class="bg-gray-100 p-2 border border-gray-200 font-mono text-[10px] text-gray-600">try_files $uri $uri/ /index.html;</pre>
+                          </div>
+                       </div>
+                  </div>
+
+               </div>
+          </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-app-border py-8">
+      <div class="max-w-[960px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs text-app-meta">
+        <div>
+          <span class="font-bold text-gray-500">Linkkiste</span> &copy; <script>document.write(new Date().getFullYear())</script>
+        </div>
+        <div class="flex gap-4 mt-2 md:mt-0">
+            <a href="https://michaelfoertsch.de/impressum.html" class="hover:text-app-blue hover:underline">Impressum</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
