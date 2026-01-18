@@ -1,11 +1,20 @@
 # Michael Förtsch - Minimalistisches Portfolio
 
-Dies ist eine extrem simple, schnelle und wartungsarme Portfolio-Seite, die aus einem Experiment mit Gemini 3 Pro enstand. Sie ist zum Teil also KI-generiert, zum Teil händisch nachgebessert, da Gemini teils absurde Fehler machte.
-Ich teile sie hier. Wer mag, kann basierend darauf eine eigene Seite erstellen.
-
+Dies ist eine extrem simple, schnelle und wartungsarme Portfolio-Seite, basierend auf deinen Anforderungen:
 - **Kein React**, kein Build-Prozess.
 - **Nur HTML-Dateien** für die gesamte Website.
 - Design: "Dezenter" als die Vorlage. Helle Papier-Töne statt grellem Gelb, Fokus auf Typografie.
+
+## Technologie-Stack (Keep it simple)
+
+Um Fragen vorzubeugen, hier was wir nutzen (und was nicht):
+
+*   ✅ **HTML5 & CSS3:** Das Gerüst.
+*   ✅ **Tailwind CSS:** Für das Design (via CDN geladen, keine Installation nötig).
+*   ✅ **JavaScript:** Minimal (nur für Konfiguration im Browser).
+*   ❌ **React / Vue / Angular:** Nein. Kein Framework-Overhead.
+*   ❌ **TypeScript:** Nein. Browser verstehen nur JS.
+*   ❌ **Ruby on Rails / PHP / Node.js:** Nein. Die Seite braucht kein Backend und keine Datenbank.
 
 ## 📂 Ordnerstruktur (WICHTIG!)
 
@@ -47,11 +56,25 @@ dein-projekt-ordner/
     ├── foto-06.jpg          (Portrait/Hochformat - Bild 6)
     ├── foto-07.jpg          (Portrait/Hochformat - Bild 7)
     ├── foto-08.jpg          (Portrait/Hochformat - Bild 8)
+    ├── foto-09.jpg          (Landscape/16:9 - Bild 9)
+    ├── foto-10.jpg          (Landscape/16:9 - Bild 10)
+    ├── foto-11.jpg          (Landscape/16:9 - Bild 11)
+    ├── foto-12.jpg          (Landscape/16:9 - Bild 12)
+    ├── foto-13.jpg          (Portrait/Hochformat - Bild 13)
+    ├── foto-14.jpg          (Portrait/Hochformat - Bild 14)
+    ├── foto-15.jpg          (Portrait/Hochformat - Bild 15)
+    ├── foto-16.jpg          (Portrait/Hochformat - Bild 16)
     │
     ├── ki-01.jpg            (KI Bild 1)
     ├── ki-02.jpg            (KI Bild 2)
-    ... bis ...
-    └── ki-12.jpg            (KI Bild 12)
+    ...
+    ├── ki-12.jpg            (KI Bild 12)
+    ├── ki-13.jpg            (KI Landscape 16:9)
+    ├── ki-14.jpg            (KI Landscape 16:9)
+    ├── ki-15.jpg            (KI Landscape 16:9)
+    ├── ki-16.jpg            (KI Portrait)
+    ├── ki-17.jpg            (KI Portrait)
+    └── ki-18.jpg            (KI Portrait)
 ```
 
 Wenn die Bilder im Ordner `graphics` fehlen, wird an der Stelle ein "Broken Image" Icon angezeigt, da wir die Fallback-Bilder aus dem Internet entfernt haben.
