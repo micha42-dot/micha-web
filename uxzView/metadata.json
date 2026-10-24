@@ -1,0 +1,6 @@
+{
+  "name": "üxzView - Minimalistischer Bildbetrachter",
+  "description": "Minimalistische Landing Page für üxzView – den schnellen, nativen Open-Source Bildbetrachter für Windows, Linux und macOS, entwickelt mit C++20 und Qt 6.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

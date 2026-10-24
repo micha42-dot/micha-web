@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: #202123;
+  color: #f1f2f4;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pixel-logo {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Primary stark brutalist button */
+.btn-classic-primary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 0px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.btn-classic-primary:hover {
+  background-color: #e2e4e8;
+  border-color: #e2e4e8;
+  color: #000000;
+}
+
+/* Secondary sharp button */
+.btn-classic-secondary {
+  background-color: #17181a;
+  color: #f1f2f4;
+  border: 1px solid #363940;
+  border-radius: 0px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.btn-classic-secondary:hover {
+  background-color: #292b30;
+  border-color: #4f535d;
+  color: #ffffff;
+}
+
+/* Keycaps */
+kbd {
+  font-family: var(--font-mono);
+  background-color: #17181a;
+  border: 1px solid #3a3d46;
+  border-radius: 0px;
+  padding: 2px 7px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  display: inline-block;
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+/* Architectural section titles - clean, unbordered label */
+.section-title {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* Code block */
+.terminal-block {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: #f1f2f4;
+  background-color: #161719;
+  border: 1px solid #34373e;
+  border-radius: 0px;
+  padding: 0.85rem 1.1rem;
+}
