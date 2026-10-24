@@ -14,7 +14,7 @@
         .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease-in-out; } 
         .group:hover .link-underline { background-size: 100% 2px; }
         /* Subtle zoom effect for images */
-        .zoom-container { overflow: hidden; }
+        .zoom-container { overflow: hidden; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
         .zoom-img { transition: transform 0.5s ease; width: 100%; height: auto; display: block; }
         .zoom-container:hover .zoom-img { transform: scale(1.03); }
     </style>
@@ -30,12 +30,17 @@
 
     <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50 relative">
         <a href="index.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
-        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+        <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
             <li><a href="artikel.html" class="hover:text-ink transition-colors">Artikel & Arbeit</a></li>
             <li><a href="fotos.html" class="hover:text-ink transition-colors">Fotos</a></li>
             <li><a href="ki.html" class="text-ink border-b-2 border-black pb-1">KI</a></li>
             <li><a href="projekte.html" class="hover:text-ink transition-colors">Projekte</a></li>
             <li><a href="ueber.html" class="hover:text-ink transition-colors">Über</a></li>
+            <li class="flex items-center text-xs tracking-wider ml-1 border-l border-gray-300 pl-4 py-0.5">
+                <span class="text-ink font-bold">DE</span>
+                <span class="mx-1.5 text-gray-400">/</span>
+                <a href="ki-en.html" class="text-subtle hover:text-ink transition-colors">EN</a>
+            </li>
         </ul>
     </nav>
 
@@ -51,6 +56,9 @@
             <div class="md:col-span-8 lg:col-span-9 text-lg md:text-xl font-light leading-relaxed space-y-6">
                 <p>
                     Bereits seit einigen Jahren beschäftige ich mich mit dem, was heute Generative AI genannt wird – insbesondere Text-to-Image-Generatoren aber auch Text-Generatoren. Diese Technologien basieren auf der Fähigkeit von künstlichen neuronalen Netzen, in vorhandenen Daten statistische Muster und Zusammenhänge zu erkennen und in einem Modell zu speichern. Basierend auf diesem kann ein System anschließend aus diesem Modell verschiedenste Inhalte generieren, die auf den Erlernten basieren. Beispielsweise Bilder, Texte oder sogar Videoinhalte.
+                </p>
+                <p>
+                    Ich bin fasziniert von den kreativen Möglichkeiten und der rasanten technischen Entwicklung generativer KI – stehe vielen Ausprägungen, Versprechungen und gesellschaftlichen Entwicklungen in diesem Bereich jedoch zugleich ausgesprochen kritisch und skeptisch gegenüber.
                 </p>
             </div>
         </section>
@@ -138,12 +146,15 @@
             <div class="md:col-span-8 lg:col-span-9">
                 <div class="text-lg font-light leading-relaxed text-subtle space-y-6 mb-10">
                     <p>
-                        Ebenso habe ich mit Stable Diffusion auf Anfrage hin für einen kleinen Videospielentwickler verschiedene Bilder generiert, die als Inspiration für ein Projekt dienen sollen, das eine surreale Post-Apokalpyse zeigt. Dazu bin ich immer wieder mit anderen Medienvertretern und Agenturen über diese neuen KI-basierten Tools im Austausch, um mit meinen Einschätzungen und Erfahrungen zu helfen. Oh, und manchmal sitze ich auch in Gesprächsrunden wie beispielsweise bei Webedia, wo ich meine Meinung vor kleinem Publikum teile.
+                        Ebenso habe ich mit Stable Diffusion auf Anfrage hin für einen kleinen Videospielentwickler verschiedene Bilder generiert, die als Inspiration für ein Projekt dienen sollen, das eine surreale Post-Apokalpyse zeigt. Dazu bin ich immer wieder mit anderen Medienvertretern und Agenturen über diese neuen KI-basierten Tools im Austausch, um mit meinen Einschätzungen und Erfahrungen zu helfen.
+                    </p>
+                    <p>
+                        Mein Wissen gebe ich auch in Workshops und Vorträgen weiter: So habe ich unter anderem KI-Workshops bei Max Planck Information and Technology (MaxIT) gegeben, beim KI-Camp von Medien.Bayern über KI-Agenten und Generative KI referiert sowie beim Festival der Zukunft 2026 über den Missbrauch von KI-Werkzeugen zur Verbreitung von AI Ragebait Slop und Desinformation gesprochen. Und manchmal sitze ich in Gesprächsrunden wie beispielsweise bei Webedia, wo ich meine Einschätzungen teile.
                     </p>
                 </div>
 
                 <!-- YouTube Video Embed (Standard Code from User) -->
-                <div class="w-full aspect-video bg-black shadow-sm">
+                <div class="w-full aspect-video bg-black shadow-sm border border-gray-200">
                     <iframe 
                         class="w-full h-full"
                         src="https://www.youtube.com/embed/SYOWJFOIv70?si=z8Ll_TqDWcCQBwWP" 
@@ -285,7 +296,7 @@
      <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto relative z-10">
         <div class="flex flex-col md:flex-row justify-between items-end mb-8">
             <p class="text-xs text-subtle font-mono">
-                © 2025 Michael Förtsch<br>Based in Germany.
+                © 2026 Michael Förtsch<br>Based in Germany.
             </p>
             <a href="impressum.html" class="mt-4 md:mt-0 text-sm font-bold uppercase hover:opacity-60">Impressum</a>
         </div>

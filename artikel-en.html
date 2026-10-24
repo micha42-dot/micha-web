@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Förtsch | Articles & Work</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'], }, colors: { 'paper': '#F5F5F2', 'ink': '#1A1A1A', 'subtle': '#6B7280', } } } }
+    </script>
+    <style> body { background-color: #F5F5F2; color: #1A1A1A; -webkit-font-smoothing: antialiased; } .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease-in-out; } .group:hover .link-underline { background-size: 100% 2px; } </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen relative">
+    <!-- Background Image Container -->
+    <div class="absolute top-0 left-0 w-full h-[85vh] z-0 overflow-hidden pointer-events-none">
+        <img src="graphics/artikel-bg.jpg" 
+             alt="Background" 
+             class="w-full h-full object-cover opacity-40 mix-blend-multiply object-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#F5F5F2]/10 to-[#F5F5F2]"></div>
+    </div>
+
+    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50 relative">
+        <a href="index-en.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
+        <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+            <li><a href="artikel-en.html" class="text-ink border-b-2 border-black pb-1">Articles & Work</a></li>
+            <li><a href="fotos-en.html" class="hover:text-ink transition-colors">Photos</a></li>
+            <li><a href="ki-en.html" class="hover:text-ink transition-colors">AI</a></li>
+            <li><a href="projekte-en.html" class="hover:text-ink transition-colors">Projects</a></li>
+            <li><a href="ueber-en.html" class="hover:text-ink transition-colors">About</a></li>
+            <li class="flex items-center text-xs tracking-wider ml-1 border-l border-gray-300 pl-4 py-0.5">
+                <a href="artikel.html" class="text-subtle hover:text-ink transition-colors">DE</a>
+                <span class="mx-1.5 text-gray-400">/</span>
+                <span class="text-ink font-bold">EN</span>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full relative z-10">
+        <h1 class="font-display text-5xl md:text-7xl font-bold mb-4">Articles & Work.</h1>
+        <p class="text-lg text-subtle mb-24 max-w-2xl">A curated selection of articles, investigations, and audio productions.</p>
+
+        <!-- SECTION: ARTIKEL -->
+        <section class="mb-32">
+            <div class="flex items-baseline justify-between mb-12 border-b border-gray-300 pb-4">
+                <h2 class="font-display text-3xl font-bold">Articles.</h2>
+                <span class="font-mono text-xs uppercase tracking-widest text-subtle hidden md:inline-block">Writing & Editorial</span>
+            </div>
+
+            <div class="flex flex-col gap-12">
+                
+                <!-- Asimov V1 -->
+                <article class="group grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/der-asimov-v1-ist-ein-roboter-den-jeder-nachbauen-darf" target="_blank" class="link-underline">The Asimov V1 is a robot anyone is allowed to build</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            A robot for the masses: Thanks to open source hardware and 3D printing, the Asimov V1 can be built by anyone at home.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2026</div>
+                </article>
+
+                <!-- W-Social -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/w-social-europas-x-alternative-wirft-so-manche-frage-auf" target="_blank" class="link-underline">W-Social: Europe's X alternative raises quite a few questions</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            A new platform from Europe aims to challenge X. But behind W-Social's ambitious goals lie multiple unanswered questions.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2026</div>
+                </article>
+
+                <!-- OpenClaw -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/hummer-hype-in-china-wieso-openclaw-zum-gesellschaftsphaenomen-wird" target="_blank" class="link-underline">Lobster Hype in China: Why OpenClaw fascinates</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            A curious trend is sweeping China: AI agent OpenClaw is rapidly turning into a major societal phenomenon.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2026</div>
+                </article>
+
+                <!-- SpaceX IPO -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/der-boersengang-von-spacex-waere-ein-schritt-in-richtung-cyberpunk-dystopie" target="_blank" class="link-underline">The IPO of SpaceX</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            When corporations reach for the stars: Why an IPO of SpaceX could trigger far-reaching and potentially dystopian consequences for space exploration.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2026</div>
+                </article>
+
+                <!-- AI Artists -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/ai-artists-versus-ki-kritiker-laesst-sich-mit-kuenstlicher-intelligenz-echte-kunst-erschaffen" target="_blank" class="link-underline">AI Artists versus AI Critics: Real Art?</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            The ongoing controversy around AI-generated imagery: Is it true art or mere computed imitation? An exploration of the arguments of AI creators and their critics.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2025</div>
+                </article>
+
+                <!-- DeepSeek -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/was-du-%C3%BCber-deepseek-wissen-musst-chinas-open-source-ki-erschreckt-das-silicon-valley" target="_blank" class="link-underline">What you need to know about DeepSeek</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            China's open-source AI startles Silicon Valley: How a startup challenged American tech giants like OpenAI at a fraction of the cost.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2025</div>
+                </article>
+
+                <!-- David Lynch -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">Games.ch</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.games.ch/features/artikel/verspaetete-erinnerung-muje/preview/" target="_blank" class="link-underline">Into Surreal Worlds</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Obituary for David Lynch. We gathered some of the most 'Lynchian' games to remember the visionary creator and his indelible influence on Twin Peaks and pop culture.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2025</div>
+                </article>
+
+                <!-- Métal Hurlant -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/m%C3%A9tal-hurlant-wie-franz%C3%B6sische-comic-zeichner-vor-50-jahren-die-zukunft-erfanden" target="_blank" class="link-underline">Métal Hurlant: How Comic Artists Invented the Future</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            50 years ago, a magazine debuted without which Blade Runner, Alien, or Star Wars might never have existed. A deep dive into French visionaries.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2024</div>
+                </article>
+
+                <!-- Alien Romulus -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">Rolling Stone</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.rollingstone.de/alien-romulus-alvarez-interview-2779155" target="_blank" class="link-underline">„Alien: Romulus“ Director Fede Alvarez</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            In an interview, Alvarez explains why H.R. Giger would be proud and how he set out to revitalize the iconic „Alien“ universe.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2024</div>
+                </article>
+
+                <!-- V - Die Besucher -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/der-science-fiction-klassiker-v-darum-ist-die-80er-jahre-serie-heute-relevanter-denn-je" target="_blank" class="link-underline">The Science-Fiction Classic V</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Why the 1980s TV series about fascist aliens in disguise is more relevant today than ever before. A pop-culture artifact examined.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2024</div>
+                </article>
+
+                <!-- Ong's Hat -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://1e9.community/t/der-vielleicht-aelteste-internet-mythos-ueberhaupt-das-mysterium-von-ong-s-hat/19698" target="_blank" class="link-underline">The Mystery of Ong’s Hat</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Perhaps the earliest internet myth of all: A collaborative narrative experiment from the 80s involving dimensional gateways that spiraled out of control.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">Archive</div>
+                </article>
+
+                <!-- Philip K. Dick -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/die-merkw%C3%BCrdigen-visionen-der-science-fiction-ikone-philip-k-dick" target="_blank" class="link-underline">The Visions of Philip K. Dick</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            He questioned reality and suspected his novels originated from extraterrestrials. On the 40th anniversary of the passing of an icon whose work paved the way for The Matrix and cyberpunk.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2022</div>
+                </article>
+
+                <!-- Cloud Gaming -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">Wasted</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://wasted.de/2022/11/alles-wolkig-oder-was-eine-kleine-geschichte-des-cloud-gamings/" target="_blank" class="link-underline">All In The Cloud?</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            A brief history of cloud gaming. Where did the vision originate, and what role did Nvidia play in making streaming games a reality?
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2022</div>
+                </article>
+
+                <!-- Deepfakes -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://1e9.community/t/wie-ich-in-nur-zwei-wochen-gelernt-habe-eigene-deepfakes-zu-produzieren/3494" target="_blank" class="link-underline">Self-Experiment: Deepfakes</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            How I learned to produce my own deepfakes in just two weeks. A report on the ethical challenges and the surprising ease of modern AI synthesis.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">Archive</div>
+                </article>
+
+                <!-- Projekt Daedalus -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">1E9 Magazine</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.1e9.community/magazin/projekt-daedalus-wie-uns-ein-fusions-raumschiff-in-ein-anderes-sonnensystem-bomben-sollte" target="_blank" class="link-underline">Project Daedalus</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            How a fusion-powered starship was planned to bomb human probes into another solar system. The story of a grand engineering ambition from the 1970s.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">Archive</div>
+                </article>
+
+                <!-- Stalker -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">PC Games</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.pcgames.de/Stalker-Shadow-of-Chernobyl-Spiel-34605/Specials/Zehn-Jahre-Stalker-1225672/" target="_blank" class="link-underline">Stalker turns ten</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Of robot chickens, fedoras, and a roadside picnic. The chaotic development history of the iconic cult shooter from Ukraine.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">2017</div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION: PODCASTS & RADIO -->
+        <section>
+            <div class="flex items-baseline justify-between mb-12 border-b border-gray-300 pb-4">
+                <h2 class="font-display text-3xl font-bold">Podcasts & Radio.</h2>
+                <span class="font-mono text-xs uppercase tracking-widest text-subtle hidden md:inline-block">Audio & Voice</span>
+            </div>
+
+             <div class="flex flex-col gap-12">
+                
+                <!-- Die OpenAI Story -->
+                <article class="group grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">Deutschlandfunk</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.deutschlandfunk.de/die-peter-thiel-story-100.html" target="_blank" class="link-underline">The OpenAI Story</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed mb-4">
+                            This podcast series explores the origins of AI pioneer OpenAI and the rise of Sam Altman into a defining — and increasingly controversial — tech luminary. It simultaneously chronicles the broader trajectory of artificial intelligence between global euphoria and growing societal pushback.
+                        </p>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            For this Deutschlandfunk production, I conducted investigative research, scouted interviewees, and interviewed domain experts.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">
+                        2026<br><span class="opacity-75">Podcast Series</span>
+                    </div>
+                </article>
+
+                <!-- Hyperloop -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">ARD / BR</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.ardaudiothek.de/episode/urn:ard:episode:52f758b8f86d73ea/" target="_blank" class="link-underline">Hyperloop: Future of Mobility or Dead End?</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed mb-4">
+                            It sounds like science fiction: shooting passenger capsules through near-vacuum tubes at 900 km/h.
+                        </p>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Together with Christian Schiffer, I researched the history of the Hyperloop, its technological challenges, and the criticism surrounding it, conducting interviews with numerous innovators and critics.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">
+                        2024<br><span class="opacity-75">Radio Feature</span>
+                    </div>
+                </article>
+
+                <!-- Die Elon Musk Story -->
+                <article class="group border-t border-gray-300 pt-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-2 text-xs font-mono text-subtle uppercase pt-2">WDR / 1Live</div>
+                    <div class="md:col-span-8">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-4">
+                            <a href="https://www.ardaudiothek.de/sendung/1live-die-elon-musk-story/urn:ard:show:54d819d5fb6a8835/" target="_blank" class="link-underline">The Elon Musk Story</a>
+                        </h3>
+                        <p class="text-subtle text-lg font-light leading-relaxed mb-4">
+                            What has happened to Elon Musk? Once an inspirational visionary, now the world's richest provocateur — promoting conspiracy theories and exerting power in controversial ways.
+                        </p>
+                        <p class="text-subtle text-lg font-light leading-relaxed">
+                            Together with Klaus Uhrig, Christian Schiffer, and Sarah Kriesche, I spent several months investigating, interviewing contemporaries, and shaping our reporting into this comprehensive podcast series.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 text-right text-xs font-mono text-subtle pt-2">
+                        2023<br><span class="opacity-75">Podcast Series</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-8">
+            <p class="text-xs text-subtle font-mono">
+                © 2026 Michael Förtsch<br>Based in Germany.
+            </p>
+            <a href="impressum-en.html" class="mt-4 md:mt-0 text-sm font-bold uppercase hover:opacity-60">Imprint</a>
+        </div>
+        <div class="text-center text-xs text-subtle font-mono opacity-50">
+            ❤️ Made by a human with the support of AI
+        </div>
+    </footer>
+</body>
+</html>

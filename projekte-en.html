@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Förtsch | Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'], }, colors: { 'paper': '#F5F5F2', 'ink': '#1A1A1A', 'subtle': '#6B7280', } } } }
+    </script>
+    <style> body { background-color: #F5F5F2; color: #1A1A1A; -webkit-font-smoothing: antialiased; } .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease-in-out; } .group:hover .link-underline { background-size: 100% 2px; } </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen relative">
+    <!-- Background Image Container -->
+    <div class="absolute top-0 left-0 w-full h-[85vh] z-0 overflow-hidden pointer-events-none">
+        <img src="graphics/projekte-bg.jpg" 
+             alt="Background" 
+             class="w-full h-full object-cover opacity-40 mix-blend-multiply object-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#F5F5F2]/10 to-[#F5F5F2]"></div>
+    </div>
+
+    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50 relative">
+        <a href="index-en.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
+        <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+            <li><a href="artikel-en.html" class="hover:text-ink transition-colors">Articles & Work</a></li>
+            <li><a href="fotos-en.html" class="hover:text-ink transition-colors">Photos</a></li>
+            <li><a href="ki-en.html" class="hover:text-ink transition-colors">AI</a></li>
+            <li><a href="projekte-en.html" class="text-ink border-b-2 border-black pb-1">Projects</a></li>
+            <li><a href="ueber-en.html" class="hover:text-ink transition-colors">About</a></li>
+            <li class="flex items-center text-xs tracking-wider ml-1 border-l border-gray-300 pl-4 py-0.5">
+                <a href="projekte.html" class="text-subtle hover:text-ink transition-colors">DE</a>
+                <span class="mx-1.5 text-gray-400">/</span>
+                <span class="text-ink font-bold">EN</span>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full relative z-10">
+        <h1 class="font-display text-5xl md:text-7xl font-bold mb-16">Projects.</h1>
+
+        <div class="space-y-24">
+            
+            <!-- Project 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+                <div class="md:col-span-5 lg:col-span-4">
+                     <img src="graphics/projekt-1e9.png" 
+                          alt="1E9 Project Preview" 
+                          class="aspect-video w-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm border border-gray-200">
+                </div>
+                <div class="md:col-span-7 lg:col-span-8">
+                    <h2 class="font-display text-4xl font-bold mb-4">1E9 Magazine & Community</h2>
+                    <p class="text-lg font-light text-subtle mb-6">
+                        Co-founding, co-designing 1E9, Lead Editor. Event curation and programming ... as well as visual design and branding when needed.
+                    </p>
+                    <ul class="font-mono text-xs text-subtle space-y-1 mb-6">
+                        <li>Role: Co-Founder, Editorial & Design</li>
+                        <li>Period: 2019 - Present</li>
+                    </ul>
+                    <a href="https://www.1e9.community" target="_blank" class="inline-block border-b border-black pb-1 hover:opacity-50">Visit Website ↗</a>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gray-300"></div>
+
+            <!-- Project 2: XPLR Media -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+                <div class="md:col-span-5 lg:col-span-4">
+                     <img src="graphics/projekt-xplr.png" 
+                          alt="XPLR Media Project Preview" 
+                          class="aspect-video w-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm border border-gray-200">
+                </div>
+                <div class="md:col-span-7 lg:col-span-8">
+                    <h2 class="font-display text-4xl font-bold mb-4">XPLR: MEDIA Reports</h2>
+                    <p class="text-lg font-light text-subtle mb-6">
+                        Under the umbrella of 1E9, Michael Förtsch led in-depth research studies for XPLR: MEDIA in Bavaria examining Web3, Artificial Intelligence, and the Fediverse across the media sector.
+                    </p>
+                    <ul class="font-mono text-xs text-subtle space-y-1 mb-6">
+                        <li>Role: Study Lead & Author</li>
+                        <li>Partner: Medien.Bayern GmbH</li>
+                    </ul>
+                    <a href="https://www.xplr-media.com/reports-und-studien/" target="_blank" class="inline-block border-b border-black pb-1 hover:opacity-50">Explore Reports ↗</a>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gray-300"></div>
+
+            <!-- Project 3: Kurator42 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+                <div class="md:col-span-5 lg:col-span-4">
+                     <img src="graphics/projekt-kurator.png" 
+                          alt="Kurator42 Project Preview" 
+                          class="aspect-video w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm border border-gray-200">
+                </div>
+                <div class="md:col-span-7 lg:col-span-8">
+                    <h2 class="font-display text-4xl font-bold mb-4">Kurator42 Newsletter</h2>
+                    <p class="text-lg font-light text-subtle mb-6">
+                        Since 2019, Michael Förtsch has published — irregularly and far too rarely — the newsletter Kurator42, recommending cinema, television shows, podcasts, and curating esoteric web gems.
+                    </p>
+                    <ul class="font-mono text-xs text-subtle space-y-1 mb-6">
+                        <li>Platform: Substack</li>
+                        <li>Since: 2019</li>
+                    </ul>
+                    <a href="https://kurator42.substack.com" target="_blank" class="inline-block border-b border-black pb-1 hover:opacity-50">To the Newsletter ↗</a>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gray-300"></div>
+
+            <!-- Project 4: Linkkiste -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+                <div class="md:col-span-5 lg:col-span-4">
+                     <img src="graphics/projekt-linkkiste.png" 
+                          alt="Linkkiste Project Preview" 
+                          class="aspect-video w-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm bg-gray-200 border border-gray-200">
+                </div>
+                <div class="md:col-span-7 lg:col-span-8">
+                    <h2 class="font-display text-4xl font-bold mb-4">Linkkiste</h2>
+                    <p class="text-lg font-light text-subtle mb-6">
+                        A minimalist personal bookmarking utility inspired by the classic ethos of Del.icio.us.
+                    </p>
+                    <ul class="font-mono text-xs text-subtle space-y-1 mb-6">
+                        <li>Type: Personal Tool</li>
+                        <li>Status: In Development</li>
+                    </ul>
+                    <a href="linkkiste_landing/index.html" class="inline-block border-b border-black pb-1 hover:opacity-50">To Project Page ↗</a>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-gray-300"></div>
+
+            <!-- Project 5: üxzView -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+                <div class="md:col-span-5 lg:col-span-4">
+                    <div class="aspect-video w-full flex items-center justify-center bg-gray-100 p-8 shadow-sm border border-gray-200">
+                        <img src="graphics/uxz.png" 
+                             alt="ügzView Logo" 
+                             class="max-h-16 w-auto object-contain [image-rendering:pixelated]">
+                    </div>
+                </div>
+                <div class="md:col-span-7 lg:col-span-8">
+                    <h2 class="font-display text-4xl font-bold mb-4">üxzView</h2>
+                    <p class="text-lg font-light text-subtle mb-6">
+                        An image viewing and editing program for Windows, Linux, and Mac.
+                    </p>
+                    <ul class="font-mono text-xs text-subtle space-y-1 mb-6">
+                        <li>Type: Personal Tool</li>
+                        <li>Status: In Development</li>
+                    </ul>
+                    <a href="#" class="inline-block border-b border-black pb-1 hover:opacity-50">To GitHub Repository (Link coming soon) ↗</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+     <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-8">
+            <p class="text-xs text-subtle font-mono">
+                © 2026 Michael Förtsch<br>Based in Germany.
+            </p>
+            <a href="impressum-en.html" class="mt-4 md:mt-0 text-sm font-bold uppercase hover:opacity-60">Imprint</a>
+        </div>
+        <div class="text-center text-xs text-subtle font-mono opacity-50">
+            ❤️ Made by a human with the support of AI
+        </div>
+    </footer>
+</body>
+</html>

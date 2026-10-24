@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Förtsch | Photos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'], }, colors: { 'paper': '#F5F5F2', 'ink': '#1A1A1A', 'subtle': '#6B7280', } } } }
+    </script>
+    <style> 
+        body { background-color: #F5F5F2; color: #1A1A1A; -webkit-font-smoothing: antialiased; } 
+        .img-zoom { transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .group:hover .img-zoom { transform: scale(1.05); }
+        .group > .overflow-hidden { border: 1px solid #e5e7eb; }
+        .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease-in-out; } .link-underline:hover { background-size: 100% 2px; }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen relative">
+    <!-- Background Image Container -->
+    <div class="absolute top-0 left-0 w-full h-[85vh] z-0 overflow-hidden pointer-events-none">
+        <img src="graphics/fotos-bg.jpg" 
+             alt="Background" 
+             class="w-full h-full object-cover opacity-40 mix-blend-multiply object-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#F5F5F2]/10 to-[#F5F5F2]"></div>
+    </div>
+
+    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50 relative">
+        <a href="index-en.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
+        <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+            <li><a href="artikel-en.html" class="hover:text-ink transition-colors">Articles & Work</a></li>
+            <li><a href="fotos-en.html" class="text-ink border-b-2 border-black pb-1">Photos</a></li>
+            <li><a href="ki-en.html" class="hover:text-ink transition-colors">AI</a></li>
+            <li><a href="projekte-en.html" class="hover:text-ink transition-colors">Projects</a></li>
+            <li><a href="ueber-en.html" class="hover:text-ink transition-colors">About</a></li>
+            <li class="flex items-center text-xs tracking-wider ml-1 border-l border-gray-300 pl-4 py-0.5">
+                <a href="fotos.html" class="text-subtle hover:text-ink transition-colors">DE</a>
+                <span class="mx-1.5 text-gray-400">/</span>
+                <span class="text-ink font-bold">EN</span>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full relative z-10">
+        <h1 class="font-display text-5xl md:text-7xl font-bold mb-8">Visuals.</h1>
+        <p class="text-lg text-subtle mb-16 max-w-2xl">
+            Moments captured from analog and digital realms.
+        </p>
+
+        <!-- Photo Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 mb-24">
+
+            <!-- 1. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-01.jpg" 
+                         alt="Photo 01" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">01 — Urban</span>
+                    <span class="font-sans text-sm font-medium">London</span>
+                </div>
+            </div>
+            
+            <!-- 2. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                     <img src="graphics/foto-02.jpg" 
+                         alt="Photo 02" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">02 — Architecture</span>
+                    <span class="font-sans text-sm font-medium">Church, Poing</span>
+                </div>
+            </div>
+
+            <!-- 3. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-03.jpg" 
+                         alt="Photo 03" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                 <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">03 — Scene</span>
+                    <span class="font-sans text-sm font-medium">Early Morning</span>
+                </div>
+            </div>
+
+            <!-- 4. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-04.jpg" 
+                         alt="Photo 04" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">04 — Scene</span>
+                    <span class="font-sans text-sm font-medium">Botanical Garden</span>
+                </div>
+            </div>
+
+             <!-- 5. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                   <img src="graphics/foto-05.jpg" 
+                         alt="Photo 05" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                 <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">05 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Steve Wozniak</span>
+                </div>
+            </div>
+
+             <!-- 6. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-06.jpg" 
+                         alt="Photo 06" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                 <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">06 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Charles Schumann</span>
+                </div>
+            </div>
+            
+            <!-- 7. Portrait (2:3) -->
+             <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-07.jpg" 
+                         alt="Photo 07" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                 <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">07 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Harald Lesch</span>
+                </div>
+            </div>
+
+            <!-- 8. Portrait (2:3) -->
+             <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-08.jpg" 
+                         alt="Photo 08" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                 <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">08 — City</span>
+                    <span class="font-sans text-sm font-medium">New York City</span>
+                </div>
+            </div>
+
+            <!-- NEW IMAGES (9-16) -->
+
+            <!-- 9. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-09.jpg" 
+                         alt="Photo 09" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">09 — Street</span>
+                    <span class="font-sans text-sm font-medium">London</span>
+                </div>
+            </div>
+
+            <!-- 10. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-10.jpg" 
+                         alt="Photo 10" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">10 — Long Exposure</span>
+                    <span class="font-sans text-sm font-medium">Silo</span>
+                </div>
+            </div>
+
+            <!-- 11. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-11.jpg" 
+                         alt="Photo 11" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">11 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Fede Alvarez</span>
+                </div>
+            </div>
+
+            <!-- 12. Landscape (16:9) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-video mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-12.jpg" 
+                         alt="Photo 12" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">12 — Nature</span>
+                    <span class="font-sans text-sm font-medium">Field</span>
+                </div>
+            </div>
+
+            <!-- 13. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-13.jpg" 
+                         alt="Photo 13" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">13 — Portrait</span>
+                    <span class="font-sans text-sm font-medium">Slavina</span>
+                </div>
+            </div>
+
+            <!-- 14. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-14.jpg" 
+                         alt="Photo 14" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">14 — Person</span>
+                    <span class="font-sans text-sm font-medium">Contrasts</span>
+                </div>
+            </div>
+
+            <!-- 15. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-15.jpg" 
+                         alt="Photo 15" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">15 — Architecture</span>
+                    <span class="font-sans text-sm font-medium">Southwark Cathedral</span>
+                </div>
+            </div>
+
+            <!-- 16. Portrait (2:3) -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden bg-gray-200 aspect-[2/3] mb-3 relative w-full shadow-sm">
+                    <img src="graphics/foto-16.jpg" 
+                         alt="Photo 16" 
+                         class="img-zoom object-cover w-full h-full" loading="lazy">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <span class="font-mono text-xs text-subtle uppercase tracking-widest">16 — Sculpture</span>
+                    <span class="font-sans text-sm font-medium">Poing</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- More Links Section -->
+        <div class="w-full h-px bg-gray-300 mb-12"></div>
+        
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-4 lg:col-span-3">
+                 <span class="font-mono text-xs uppercase tracking-widest text-subtle">See More</span>
+            </div>
+            <div class="md:col-span-8 lg:col-span-9">
+                <p class="text-lg text-subtle font-light leading-relaxed">
+                    More photography can be viewed on Michael's <a href="https://photographie.michaelfoertsch.de/" target="_blank" class="link-underline text-ink font-medium">dedicated photo website</a>, on <a href="https://www.flickr.com/photos/zufallsfaktor/" target="_blank" class="link-underline text-ink font-medium">Flickr</a>, and on <a href="https://unsplash.com/de/@michael_f" target="_blank" class="link-underline text-ink font-medium">Unsplash</a>.
+                </p>
+            </div>
+        </section>
+
+    </main>
+    <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-8">
+            <p class="text-xs text-subtle font-mono">
+                © 2026 Michael Förtsch<br>Based in Germany.
+            </p>
+            <a href="impressum-en.html" class="mt-4 md:mt-0 text-sm font-bold uppercase hover:opacity-60">Imprint</a>
+        </div>
+        <div class="text-center text-xs text-subtle font-mono opacity-50">
+            ❤️ Made by a human with the support of AI
+        </div>
+    </footer>
+</body>
+</html>

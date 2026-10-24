@@ -22,12 +22,17 @@
 
     <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50 relative">
         <a href="index.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
-        <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+        <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
             <li><a href="artikel.html" class="hover:text-ink transition-colors">Artikel & Arbeit</a></li>
             <li><a href="fotos.html" class="hover:text-ink transition-colors">Fotos</a></li>
             <li><a href="ki.html" class="hover:text-ink transition-colors">KI</a></li>
             <li><a href="projekte.html" class="text-ink border-b-2 border-black pb-1">Projekte</a></li>
             <li><a href="ueber.html" class="hover:text-ink transition-colors">Über</a></li>
+            <li class="flex items-center text-xs tracking-wider ml-1 border-l border-gray-300 pl-4 py-0.5">
+                <span class="text-ink font-bold">DE</span>
+                <span class="mx-1.5 text-gray-400">/</span>
+                <a href="projekte-en.html" class="text-subtle hover:text-ink transition-colors">EN</a>
+            </li>
         </ul>
     </nav>
 
@@ -41,7 +46,7 @@
                 <div class="md:col-span-5 lg:col-span-4">
                      <img src="graphics/projekt-1e9.png" 
                           alt="1E9 Projektbild" 
-                          class="aspect-video w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm">
+                          class="aspect-video w-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm border border-gray-200">
                 </div>
                 <div class="md:col-span-7 lg:col-span-8">
                     <h2 class="font-display text-4xl font-bold mb-4">1E9 Magazin & Community</h2>
@@ -63,7 +68,7 @@
                 <div class="md:col-span-5 lg:col-span-4">
                      <img src="graphics/projekt-xplr.png" 
                           alt="XPLR Media Projektbild" 
-                          class="aspect-video w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm">
+                          class="aspect-video w-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm border border-gray-200">
                 </div>
                 <div class="md:col-span-7 lg:col-span-8">
                     <h2 class="font-display text-4xl font-bold mb-4">XPLR: MEDIA Reports</h2>
@@ -85,7 +90,7 @@
                 <div class="md:col-span-5 lg:col-span-4">
                      <img src="graphics/projekt-kurator.png" 
                           alt="Kurator42 Projektbild" 
-                          class="aspect-video w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm">
+                          class="aspect-video w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm border border-gray-200">
                 </div>
                 <div class="md:col-span-7 lg:col-span-8">
                     <h2 class="font-display text-4xl font-bold mb-4">Kurator42 Newsletter</h2>
@@ -107,7 +112,7 @@
                 <div class="md:col-span-5 lg:col-span-4">
                      <img src="graphics/projekt-linkkiste.png" 
                           alt="Linkkiste Projektbild" 
-                          class="aspect-video w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm bg-gray-200">
+                          class="aspect-video w-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 shadow-sm bg-gray-200 border border-gray-200">
                 </div>
                 <div class="md:col-span-7 lg:col-span-8">
                     <h2 class="font-display text-4xl font-bold mb-4">Linkkiste</h2>
@@ -122,12 +127,36 @@
                 </div>
             </div>
 
+            <div class="w-full h-px bg-gray-300"></div>
+
+            <!-- Project 5: üxzView -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 group">
+                <div class="md:col-span-5 lg:col-span-4">
+                    <div class="aspect-video w-full flex items-center justify-center bg-gray-100 p-8 shadow-sm border border-gray-200">
+                        <img src="graphics/uxz.png" 
+                             alt="üxzView Logo" 
+                             class="max-h-16 w-auto object-contain [image-rendering:pixelated]">
+                    </div>
+                </div>
+                <div class="md:col-span-7 lg:col-span-8">
+                    <h2 class="font-display text-4xl font-bold mb-4">üxzView</h2>
+                    <p class="text-lg font-light text-subtle mb-6">
+                        Ein Bildbetrachtungs- und bearbeitungsprogramm für Windows, Linux und Mac.
+                    </p>
+                    <ul class="font-mono text-xs text-subtle space-y-1 mb-6">
+                        <li>Typ: Personal Tool</li>
+                        <li>Status: In Entwicklung</li>
+                    </ul>
+                    <a href="#" class="inline-block border-b border-black pb-1 hover:opacity-50">Zum GitHub-Repository (Link folgt) ↗</a>
+                </div>
+            </div>
+
         </div>
     </main>
      <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto relative z-10">
         <div class="flex flex-col md:flex-row justify-between items-end mb-8">
             <p class="text-xs text-subtle font-mono">
-                © 2025 Michael Förtsch<br>Based in Germany.
+                © 2026 Michael Förtsch<br>Based in Germany.
             </p>
             <a href="impressum.html" class="mt-4 md:mt-0 text-sm font-bold uppercase hover:opacity-60">Impressum</a>
         </div>

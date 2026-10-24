@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Förtsch | AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'], }, colors: { 'paper': '#F5F5F2', 'ink': '#1A1A1A', 'subtle': '#6B7280', } } } }
+    </script>
+    <style> 
+        body { background-color: #F5F5F2; color: #1A1A1A; -webkit-font-smoothing: antialiased; } 
+        .link-underline { background-image: linear-gradient(transparent, transparent), linear-gradient(#1A1A1A, #1A1A1A); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease-in-out; } 
+        /* Subtle zoom effect for images */
+        .zoom-container { overflow: hidden; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .zoom-img { transition: transform 0.5s ease; width: 100%; height: auto; display: block; }
+        .zoom-container:hover .zoom-img { transform: scale(1.03); }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen relative">
+    <!-- Background Image Container -->
+    <div class="absolute top-0 left-0 w-full h-[85vh] z-0 overflow-hidden pointer-events-none">
+        <img src="graphics/ki-bg.jpg" 
+             alt="Background" 
+             class="w-full h-full object-cover opacity-40 mix-blend-multiply object-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#F5F5F2]/10 to-[#F5F5F2]"></div>
+    </div>
+
+    <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-8 w-full flex flex-col md:flex-row justify-between items-start md:items-center z-50 relative">
+        <a href="index-en.html" class="font-display font-bold text-2xl tracking-tight mb-4 md:mb-0">MF.</a>
+        <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-mono uppercase tracking-widest text-subtle">
+            <li><a href="artikel-en.html" class="hover:text-ink transition-colors">Articles & Work</a></li>
+            <li><a href="fotos-en.html" class="hover:text-ink transition-colors">Photos</a></li>
+            <li><a href="ki-en.html" class="text-ink border-b-2 border-black pb-1">AI</a></li>
+            <li><a href="projekte-en.html" class="hover:text-ink transition-colors">Projects</a></li>
+            <li><a href="ueber-en.html" class="hover:text-ink transition-colors">About</a></li>
+            <li class="flex items-center text-xs tracking-wider ml-1 border-l border-gray-300 pl-4 py-0.5">
+                <a href="ki.html" class="text-subtle hover:text-ink transition-colors">DE</a>
+                <span class="mx-1.5 text-gray-400">/</span>
+                <span class="text-ink font-bold">EN</span>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="flex-grow max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full relative z-10">
+        <h1 class="font-display text-5xl md:text-7xl font-bold mb-8">Generative Intelligence.</h1>
+        <div class="w-full h-px bg-gray-300 mb-16"></div>
+
+        <!-- Intro Block -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+            <div class="md:col-span-4 lg:col-span-3 font-mono text-xs uppercase tracking-widest text-subtle pt-2">
+                Status Quo
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-lg md:text-xl font-light leading-relaxed space-y-6">
+                <p>
+                    For several years now, I have been actively engaged with what is today termed Generative AI — especially text-to-image generators as well as large language models. These technologies are rooted in artificial neural networks capable of learning statistical patterns and intricate relationships across massive datasets and encoding them into unified models. From there, systems can synthesize novel content grounded in that learned knowledge — including imagery, text, and synthetic video.
+                </p>
+                <p>
+                    While I remain fascinated by the creative possibilities and rapid evolution of generative AI, I view many of the claims, industry developments, and societal ramifications in this space with pronounced criticism and skepticism.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bilder 1-3 (3er Reihe) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-24 items-start">
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-01.jpg" alt="AI Image 1" class="zoom-img">
+            </div>
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-02.jpg" alt="AI Image 2" class="zoom-img">
+            </div>
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-03.jpg" alt="AI Image 3" class="zoom-img">
+            </div>
+            <div class="md:col-span-3 text-right font-mono text-xs text-subtle mt-2">Prompt Experiments / V1</div>
+        </div>
+
+        <!-- Tech Block -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+            <div class="md:col-span-4 lg:col-span-3 font-mono text-xs uppercase tracking-widest text-subtle pt-2">
+                The Technology
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-lg font-light leading-relaxed text-subtle space-y-6">
+                <p>
+                    In 2022, a major revolution swept across generative AI. The catalyst was the transformer architecture, a neural network paradigm developed by Google Brain. Transformers specialize in natural language understanding and generation, processing text holistically and capturing rich contextual relationships rather than examining words strictly sequentially. They weigh crucial elements in language using self-attention mechanisms.
+                </p>
+                <p>
+                    Another major breakthrough arrived with diffusion models. These allow AI systems to synthesize visuals from descriptive prompts. Rather than assembling predefined assets, a diffusion model initiates with pure gaussian noise and iteratively refines it across calculation steps. Guided by learned statistical distributions, the system denoises the representation until it matches the requested concepts. More sampling steps typically yield richer texture, coherence, and fidelity.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bilder 4-5 (2er Reihe Groß) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24 items-start">
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-04.jpg" alt="AI Image 4" class="zoom-img">
+            </div>
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-05.jpg" alt="AI Image 5" class="zoom-img">
+            </div>
+            <div class="md:col-span-2 text-right font-mono text-xs text-subtle mt-2">Diffusion Model Latent Space Exploration</div>
+        </div>
+
+        <!-- Personal Experience Block -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+            <div class="md:col-span-4 lg:col-span-3 font-mono text-xs uppercase tracking-widest text-subtle pt-2">
+                Practice & Training
+            </div>
+            <div class="md:col-span-8 lg:col-span-9 text-lg font-light leading-relaxed space-y-6">
+                <p>
+                    Following the breakthrough of ChatGPT, I extensively examined diverse large language models (LLMs) — such as the GPT family, Llama, Alpaca, and others — honing prompt engineering methodologies, and dedicating extensive time to image synthesis across Stable Diffusion, DALL-E 2/3, and Midjourney.
+                </p>
+                <p>
+                    With the emergence of Midjourney, Stable Diffusion, Nano Banana, Minimax Image-01, and similar generative tools, I spoke with numerous artists and creators regarding how these technologies alter creative professions and how they can be leveraged meaningfully in production workflows.
+                </p>
+                <p>
+                    I have been particularly active within the Stable Diffusion ecosystem. I fine-tuned bespoke models with custom datasets and my own photographic archives, teaching models specific aesthetic signatures — especially the distinct visual atmosphere of 1980s science fiction cinema.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bilder 6-9 (4er Grid) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24 items-start">
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-06.jpg" alt="AI Image 6" class="zoom-img">
+            </div>
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-07.jpg" alt="AI Image 7" class="zoom-img">
+            </div>
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-08.jpg" alt="AI Image 8" class="zoom-img">
+            </div>
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-09.jpg" alt="AI Image 9" class="zoom-img">
+            </div>
+             <div class="md:col-span-4 text-right font-mono text-xs text-subtle mt-2">Fine-tuning: 80s Sci-Fi Aesthetics</div>
+        </div>
+
+        <!-- Consulting Block -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+             <div class="md:col-span-4 lg:col-span-3 font-mono text-xs uppercase tracking-widest text-subtle pt-2">
+                Application
+            </div>
+            <div class="md:col-span-8 lg:col-span-9">
+                <div class="text-lg font-light leading-relaxed text-subtle space-y-6 mb-10">
+                    <p>
+                        Using Stable Diffusion, I also produced concept art and visual inspiration for an indie game development studio working on a surreal post-apocalyptic title. Furthermore, I routinely advise media organizations, editorial houses, and agencies navigating generative tools.
+                    </p>
+                    <p>
+                        I also share my knowledge through hands-on workshops and keynotes: Among others, I have conducted AI workshops for Max Planck Information and Technology (MaxIT), presented on AI agents and Generative AI at the AI Camp hosted by Medien.Bayern, and spoke at the Festival der Zukunft 2026 about the misuse of AI tools to spread AI ragebait slop and disinformation. Occasionally, I participate in panel discussions, such as at Webedia, sharing my perspectives.
+                    </p>
+                </div>
+
+                <!-- YouTube Video Embed -->
+                <div class="w-full aspect-video bg-black shadow-sm border border-gray-200">
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://www.youtube.com/embed/SYOWJFOIv70?si=z8Ll_TqDWcCQBwWP" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="font-mono text-xs text-subtle mt-2 text-right">Webedia Fused: AI in Journalism</div>
+            </div>
+        </section>
+
+        <!-- Bilder 10-12 (Mix) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24 items-start">
+            <div class="zoom-container bg-gray-200">
+                <img src="graphics/ki-10.jpg" alt="AI Image 10" class="zoom-img">
+            </div>
+            <div class="grid grid-cols-1 gap-4 items-start">
+                 <div class="zoom-container bg-gray-200">
+                    <img src="graphics/ki-11.jpg" alt="AI Image 11" class="zoom-img">
+                </div>
+                <div class="zoom-container bg-gray-200">
+                    <img src="graphics/ki-12.jpg" alt="AI Image 12" class="zoom-img">
+                </div>
+            </div>
+            <div class="md:col-span-2 text-right font-mono text-xs text-subtle mt-2">Game Dev Concept Art / Surrealism</div>
+        </div>
+
+        <!-- Bilder 13-18 (Elegant Asymmetric Layout) -->
+        <div class="space-y-4 mb-32">
+            
+            <!-- Row 1: Landscape Left (Big) / Portrait Right -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+                <div class="md:col-span-8 zoom-container bg-gray-200">
+                     <img src="graphics/ki-13.jpg" alt="AI Image 13" class="zoom-img">
+                </div>
+                <div class="md:col-span-4 zoom-container bg-gray-200">
+                     <img src="graphics/ki-16.jpg" alt="AI Image 16" class="zoom-img">
+                </div>
+            </div>
+
+            <!-- Row 2: Portrait Left / Landscape Right (Big) -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+                <div class="md:col-span-4 zoom-container bg-gray-200">
+                     <img src="graphics/ki-17.jpg" alt="AI Image 17" class="zoom-img">
+                </div>
+                <div class="md:col-span-8 zoom-container bg-gray-200">
+                     <img src="graphics/ki-14.jpg" alt="AI Image 14" class="zoom-img">
+                </div>
+            </div>
+
+            <!-- Row 3: Landscape Left (Big) / Portrait Right -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+                <div class="md:col-span-8 zoom-container bg-gray-200">
+                     <img src="graphics/ki-15.jpg" alt="AI Image 15" class="zoom-img">
+                </div>
+                <div class="md:col-span-4 zoom-container bg-gray-200">
+                     <img src="graphics/ki-18.jpg" alt="AI Image 18" class="zoom-img">
+                </div>
+            </div>
+
+            <div class="text-right font-mono text-xs text-subtle mt-2">Latest Experiments</div>
+        </div>
+
+
+        <div class="w-full h-px bg-gray-300 mb-12"></div>
+
+        <!-- Articles Section -->
+        <section>
+            <h2 class="font-display text-3xl font-bold mb-12">Context & Investigations.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                
+                 <article class="group">
+                    <div class="font-mono text-xs text-subtle mb-2">1E9 Magazine</div>
+                    <h3 class="font-display text-xl font-bold mb-3 leading-tight group-hover:underline">
+                        <a href="https://www.1e9.community/magazin/der-science-fiction-klassiker-v-darum-ist-die-80er-jahre-serie-heute-relevanter-denn-je">The Sci-Fi Classic V: More Relevant Than Ever</a>
+                    </h3>
+                    <p class="text-sm text-subtle leading-relaxed">
+                        40 years ago, a television series premiered that shaped society and politics. Fascist aliens, disinformation, and media power.
+                    </p>
+                </article>
+
+                <article class="group">
+                    <div class="font-mono text-xs text-subtle mb-2">1E9 Magazine</div>
+                    <h3 class="font-display text-xl font-bold mb-3 leading-tight group-hover:underline">
+                        <a href="https://www.1e9.community/magazin/die-merkw%C3%BCrdigen-visionen-der-science-fiction-ikone-philip-k-dick">The Visions of Philip K. Dick</a>
+                    </h3>
+                    <p class="text-sm text-subtle leading-relaxed">
+                        He doubted reality and believed in simulated universes. On the author whose mind made The Matrix possible.
+                    </p>
+                </article>
+
+                 <article class="group">
+                    <div class="font-mono text-xs text-subtle mb-2">1E9 Magazine</div>
+                    <h3 class="font-display text-xl font-bold mb-3 leading-tight group-hover:underline">
+                        <a href="https://1e9.community/t/wie-ich-in-nur-zwei-wochen-gelernt-habe-eigene-deepfakes-zu-produzieren/3494">Self-Experiment: Producing Deepfakes</a>
+                    </h3>
+                    <p class="text-sm text-subtle leading-relaxed">
+                        Learning deepfake production in two weeks: A surprising look at the accessibility of modern synthesis tools.
+                    </p>
+                </article>
+
+                <article class="group">
+                    <div class="font-mono text-xs text-subtle mb-2">PC Games</div>
+                    <h3 class="font-display text-xl font-bold mb-3 leading-tight group-hover:underline">
+                        <a href="https://www.pcgames.de/Stalker-Shadow-of-Chernobyl-Spiel-34605/Specials/Zehn-Jahre-Stalker-1225672/">Stalker turns ten</a>
+                    </h3>
+                    <p class="text-sm text-subtle leading-relaxed">
+                        Robotic chickens, fedoras, and a roadside picnic. The chaotic creation history of the cult Ukrainian shooter.
+                    </p>
+                </article>
+
+                 <article class="group">
+                    <div class="font-mono text-xs text-subtle mb-2">Wasted</div>
+                    <h3 class="font-display text-xl font-bold mb-3 leading-tight group-hover:underline">
+                        <a href="https://wasted.de/2022/11/alles-wolkig-oder-was-eine-kleine-geschichte-des-cloud-gamings/">A Brief History of Cloud Gaming</a>
+                    </h3>
+                    <p class="text-sm text-subtle leading-relaxed">
+                        Where did game streaming originate — and how did Nvidia change the landscape?
+                    </p>
+                </article>
+
+                 <article class="group">
+                    <div class="font-mono text-xs text-subtle mb-2">1E9 Magazine</div>
+                    <h3 class="font-display text-xl font-bold mb-3 leading-tight group-hover:underline">
+                        <a href="https://www.1e9.community/magazin/projekt-daedalus-wie-uns-ein-fusions-raumschiff-in-ein-anderes-sonnensystem-bomben-sollte">Project Daedalus: The Fusion Starship</a>
+                    </h3>
+                    <p class="text-sm text-subtle leading-relaxed">
+                        A grand engineering blueprint from the 1970s designed to reach other star systems.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+     <footer class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 py-12 w-full border-t border-gray-300 mt-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-8">
+            <p class="text-xs text-subtle font-mono">
+                © 2026 Michael Förtsch<br>Based in Germany.
+            </p>
+            <a href="impressum-en.html" class="mt-4 md:mt-0 text-sm font-bold uppercase hover:opacity-60">Imprint</a>
+        </div>
+        <div class="text-center text-xs text-subtle font-mono opacity-50">
+            ❤️ Made by a human with the support of AI
+        </div>
+    </footer>
+</body>
+</html>
