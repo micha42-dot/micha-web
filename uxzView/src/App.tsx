@@ -14,10 +14,10 @@ export default function App() {
   const [copiedDep, setCopiedDep] = useState(false);
   const [copiedBuild, setCopiedBuild] = useState(false);
 
-  const version = '0.4.4';
+  const version = '0.4.8';
   const releaseDate = 'Oktober 2026';
   const releaseDateEn = 'October 2026';
-  const downloadUrl = 'https://github.com/micha42-dot/uxzView/releases/download/0.4.4/uxzView-win64.zip';
+  const downloadUrl = 'https://github.com/micha42-dot/uxzView/releases/download/v0.4.8/uxzView-win64.zip';
   const sha256 = 'abca4072a05e72474bbab3f1e13998847957e6d3f232a7e003b252791e1abf75';
   const repoUrl = 'https://github.com/micha42-dot/uxzView';
 
@@ -73,7 +73,7 @@ cmake --build build --config Release -j $(sysctl -n hw.ncpu)
         <div className="max-w-[1020px] mx-auto px-4 py-3 flex items-center justify-between gap-4">
           <a href="#" className="flex items-center text-white no-underline">
             <img
-              src="/assets/aistudio/_gz_view_logo_fc6b3ac0.png"
+              src="/assets/logo-header.png"
               alt="üxzView"
               className="h-6 sm:h-7 w-auto object-contain pixel-logo"
             />
@@ -132,7 +132,7 @@ cmake --build build --config Release -j $(sysctl -n hw.ncpu)
       {/* Main Content */}
       <main className="flex-grow max-w-[1020px] mx-auto px-4 py-10 w-full space-y-16">
         {/* HERO: Centered Logo with Brackets + Version & Download */}
-        <section className="border-b border-[#34373e] pb-10">
+        <section>
           {/* Logo centered above Version and Download, framed by square brackets */}
           <div className="flex items-center justify-center gap-4 sm:gap-6 pb-6 pt-2">
             <span
@@ -142,7 +142,7 @@ cmake --build build --config Release -j $(sysctl -n hw.ncpu)
               [
             </span>
             <img
-              src="/assets/aistudio/_gz_ae961cd1.jpg"
+              src="/assets/logo.jpg"
               alt="üxz"
               className="h-24 sm:h-28 w-auto object-contain pixel-logo"
             />
@@ -155,7 +155,7 @@ cmake --build build --config Release -j $(sysctl -n hw.ncpu)
           </div>
 
           {/* Prominent Statement: Free · Open-Source · Unfinished */}
-          <div className="text-center pb-12 sm:pb-14 pt-2">
+          <div className="text-center pb-8 pt-2">
             <div className="text-xl sm:text-2xl md:text-3xl font-bold tracking-wider text-white font-mono uppercase">
               Free · Open-Source · Unfinished
             </div>
@@ -164,6 +164,16 @@ cmake --build build --config Release -j $(sysctl -n hw.ncpu)
                 ? 'Inspiriert von IrfanView & nomacs. 100% kostenlos, Open-Source (GNU GPLv3) und gebraut mit C++20 & Qt 6.8.'
                 : 'Inspired by IrfanView & nomacs. 100% free, open-source (GNU GPLv3), built with C++20 & Qt 6.8.'}
             </p>
+          </div>
+
+          {/* Screenshot Preview */}
+          <div className="border border-[#34373e] bg-[#161719] overflow-hidden shadow-2xl mb-8">
+            <img
+              src="assets/screenshot.jpg"
+              alt="üxzView Programmoberfläche"
+              className="w-full h-auto block select-none"
+              loading="lazy"
+            />
           </div>
 
           {/* Release Download & Spec Panel */}
