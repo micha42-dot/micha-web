@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>üxzView — Minimalistischer, nativer Bildbetrachter für Desktop</title>
-    <meta name="description" content="üxzView – der schnelle, native, minimalistische Open-Source Bildbetrachter für Windows, Linux und macOS. Entwickelt in C++20 und Qt 6." />
-    <meta name="keywords" content="üxzView, uxzView, Bildbetrachter, Image Viewer, C++20, Qt 6, IrfanView Alternative, Open Source, RAW Viewer, Windows, Linux, macOS" />
+    <meta name="description" content="üxzView – Bildbetrachter für Windows 10/11, Linux und macOS, entwickelt mit C++20 und Qt 6. Inspiriert von IrfanView und nomacs." />
+    <meta name="keywords" content="üxzView, uxzView, Bildbetrachter, Image Viewer, C++20, Qt 6, IrfanView Alternative, nomacs, Open Source, RAW Viewer, Windows, Linux, macOS" />
     <meta name="author" content="Michael Förtsch" />
     <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="üxzView — Minimalistischer, nativer Bildbetrachter für Desktop" />
-    <meta property="og:description" content="Schnell. Nativ. Ressourcenschonend. Gebaut mit C++20 und Qt 6 für Windows, Linux und macOS. Inspired by IrfanView & nomacs." />
+    <meta property="og:description" content="üxzView ist ein Bildbetrachter für Windows 10/11, Linux und macOS, entwickelt mit C++20 und Qt 6. Inspiriert von IrfanView und nomacs." />
     <meta property="og:image" content="assets/logo.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="üxzView — Minimalistischer, nativer Bildbetrachter für Desktop" />
-    <meta name="twitter:description" content="Schnell. Nativ. Ressourcenschonend. Gebaut mit C++20 und Qt 6 für Windows, Linux und macOS." />
+    <meta name="twitter:description" content="üxzView ist ein Bildbetrachter für Windows 10/11, Linux und macOS, entwickelt mit C++20 und Qt 6." />
     <meta name="twitter:image" content="assets/logo.jpg" />
 
-    <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <!-- Fonts: JetBrains Mono & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -92,7 +92,7 @@
         font-size: 0.75rem;
         line-height: 1.6;
       }
-      /* Utility for multi-language toggle */
+      /* Multi-language toggle helper */
       .lang-de, .lang-en {
         display: none;
       }
@@ -123,8 +123,8 @@
           "price": "0",
           "priceCurrency": "EUR"
         },
-        "description": "Minimalistischer, schneller Bildbetrachter für Windows, Linux und macOS in C++20 und Qt 6.",
-        "softwareVersion": "0.4.8",
+        "description": "Minimalistischer, schneller Bildbetrachter für Windows, Linux und macOS in C++20 und Qt 6. Inspired by IrfanView & nomacs.",
+        "softwareVersion": "0.5.0",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
         "author": {
           "@type": "Person",
@@ -146,7 +146,7 @@
           />
         </a>
 
-        <nav class="flex items-center gap-4 sm:gap-5 text-xs sm:text-[13px] font-mono text-zinc-300">
+        <nav class="flex items-center gap-3 sm:gap-4 md:gap-5 text-xs sm:text-[13px] font-mono text-zinc-300">
           <a href="#features" class="hover:text-white transition-colors">
             <span class="lang-de">Funktionen</span>
             <span class="lang-en">Features</span>
@@ -155,15 +155,23 @@
             <span class="lang-de">Formate</span>
             <span class="lang-en">Formats</span>
           </a>
+          <a href="#tools" class="hover:text-white transition-colors hidden sm:inline">
+            <span class="lang-de">Erkennung</span>
+            <span class="lang-en">Tools</span>
+          </a>
+          <a href="#portable" class="hover:text-white transition-colors hidden md:inline">
+            Portable
+          </a>
           <a href="#default-app" class="hover:text-white transition-colors hidden sm:inline">
             <span class="lang-de">Standard</span>
             <span class="lang-en">Default</span>
           </a>
-          <a href="#cli" class="hover:text-white transition-colors hidden sm:inline">
-            CLI
+          <a href="#build" class="hover:text-white transition-colors hidden sm:inline">
+            Build
           </a>
-          <a href="#roadmap" class="hover:text-white transition-colors hidden sm:inline">
-            Roadmap
+          <a href="#docs" class="hover:text-white transition-colors hidden lg:inline">
+            <span class="lang-de">Doku</span>
+            <span class="lang-en">Docs</span>
           </a>
           <a
             href="https://github.com/micha42-dot/uxzView"
@@ -175,7 +183,7 @@
           </a>
 
           <!-- Language Switcher -->
-          <div class="border-l border-[#3a3d46] pl-3 flex items-center gap-1 text-xs">
+          <div class="border-l border-[#3a3d46] pl-2 sm:pl-3 flex items-center gap-1 text-xs">
             <button
               id="btn-lang-de"
               type="button"
@@ -200,9 +208,9 @@
     <!-- Main Content Container -->
     <main class="flex-grow max-w-[1020px] mx-auto px-4 py-10 w-full space-y-16">
 
-      <!-- HERO SECTION -->
+      <!-- HERO SECTION: Centered Logo with Brackets + Tagline + Screenshot + Download Spec Panel -->
       <section>
-        <!-- Logo framed by brackets -->
+        <!-- Centered Logo inside Brackets -->
         <div class="flex items-center justify-center gap-4 sm:gap-6 pb-6 pt-2">
           <span class="text-6xl sm:text-8xl font-mono text-zinc-300 select-none leading-none font-light" aria-hidden="true">[</span>
           <img src="assets/logo.jpg" alt="üxz"
@@ -211,18 +219,22 @@
           <span class="text-6xl sm:text-8xl font-mono text-zinc-300 select-none leading-none font-light" aria-hidden="true">]</span>
         </div>
 
-        <!-- Tagline -->
+        <!-- Tagline: Free · Open-Source · Unfinished -->
         <div class="text-center pb-8 pt-2">
           <div class="text-xl sm:text-2xl md:text-3xl font-bold tracking-wider text-white font-mono uppercase">
             Free · Open-Source · Unfinished
           </div>
-          <p class="text-xs sm:text-[13px] text-zinc-400 font-mono mt-2 max-w-2xl mx-auto leading-relaxed">
-            <span class="lang-de">Inspiriert von IrfanView & nomacs. 100% kostenlos, Open-Source (GNU GPLv3) und gebraut mit C++20 & Qt 6.8.</span>
-            <span class="lang-en">Inspired by IrfanView & nomacs. 100% free, open-source (GNU GPLv3), built with C++20 & Qt 6.8.</span>
+          <p class="text-xs sm:text-[13px] text-zinc-300 font-mono mt-3 max-w-2xl mx-auto leading-relaxed">
+            <span class="lang-de">üxzView ist ein Bildbetrachter für Windows 10/11, Linux und macOS, entwickelt mit C++20 und Qt 6. Inspiriert von IrfanView und nomacs.</span>
+            <span class="lang-en">üxzView is an image viewer for Windows 10/11, Linux and macOS, built with C++20 and Qt 6. Inspired by IrfanView and nomacs.</span>
+          </p>
+          <p class="text-[11px] sm:text-xs text-zinc-400 font-mono mt-1 max-w-2xl mx-auto leading-relaxed">
+            <span class="lang-de">Aktuell in aktiver Entwicklung. Fertige Pakete richten sich derzeit an Windows x64. Kompilierung aus dem Quellcode für Linux und macOS vorbereitet (native Testläufe noch ausstehend).</span>
+            <span class="lang-en">Currently in development. Prebuilt packages currently target Windows x64 only. Source builds for Linux and macOS supported (native validation in progress).</span>
           </p>
         </div>
 
-        <!-- Screenshot Preview -->
+        <!-- Screenshot Preview directly between hero tagline and download spec panel -->
         <div class="border border-[#34373e] bg-[#161719] overflow-hidden shadow-2xl mb-8">
           <img
             src="assets/screenshot.jpg"
@@ -232,23 +244,22 @@
           />
         </div>
 
-        <!-- Download & Specifications Panel -->
+        <!-- Release Download & Spec Panel -->
         <div class="border border-[#34373e] bg-[#161719] overflow-hidden font-mono text-xs sm:text-[13px]">
           <div class="bg-[#17181a] px-4 py-3 border-b border-[#34373e] flex flex-wrap items-center justify-between gap-3">
             <div class="flex items-center gap-3">
-              <span class="text-base sm:text-lg font-bold text-white font-mono">Version 0.4.8</span>
+              <span class="text-base sm:text-lg font-bold text-white font-mono">Version 0.5.0</span>
               <span class="text-[11px] font-bold text-zinc-300 bg-[#252830] px-2 py-0.5 border border-[#3c404b]">
                 <span class="lang-de">AKTUELLER RELEASE</span>
                 <span class="lang-en">CURRENT RELEASE</span>
               </span>
             </div>
             <span class="text-zinc-400 text-xs font-medium">
-              <span class="lang-de">Oktober 2026</span>
-              <span class="lang-en">October 2026</span>
+              <span class="lang-de">29. Oktober 2026</span>
+              <span class="lang-en">October 29, 2026</span>
             </span>
           </div>
 
-          <!-- Download Action Box -->
           <div class="p-4 sm:p-5 border-b border-[#34373e] flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 bg-[#1b1d21]">
             <div class="flex flex-col gap-1">
               <span class="font-bold text-white text-sm sm:text-base">
@@ -256,17 +267,17 @@
                 <span class="lang-en">Pre-built package for Windows 10/11</span>
               </span>
               <span class="text-zinc-400 text-xs">
-                <span class="lang-de">Auspacken, starten, läuft · 75.5 MB ZIP</span>
-                <span class="lang-en">Extract and run · 75.5 MB ZIP archive</span>
+                <span class="lang-de">Auspacken, starten, läuft · Windows x64 ZIP (74,4 MB)</span>
+                <span class="lang-en">Extract and run · Windows x64 ZIP (74.4 MB)</span>
               </span>
             </div>
 
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
               <a
-                href="https://github.com/micha42-dot/uxzView/releases/download/0.4.8/uxzView-win64.zip"
+                href="https://github.com/micha42-dot/uxzView/releases/download/0.5.0/uxzView-win64.zip"
                 class="btn-classic-primary text-xs sm:text-sm px-5 py-2.5 font-bold flex items-center justify-center gap-2"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M12 3v13M5 10l7 7 7-7" />
                   <line x1="4" y1="21" x2="20" y2="21" />
                 </svg>
@@ -286,7 +297,7 @@
             </div>
           </div>
 
-          <!-- Key Specifications Grid -->
+          <!-- Structured Specifications Grid -->
           <div class="divide-y divide-[#2a2d35] text-xs">
             <div class="p-3 sm:px-4 grid sm:grid-cols-12 gap-2 items-baseline">
               <span class="sm:col-span-4 text-zinc-400 font-bold">
@@ -294,19 +305,19 @@
                 <span class="lang-en">Supported Platforms</span>
               </span>
               <span class="sm:col-span-8 text-zinc-200">
-                <span class="lang-de">Windows 10/11 (Binärpaket) · Linux & macOS (Kompilieren via CMake)</span>
-                <span class="lang-en">Windows 10/11 (Pre-built) · Linux & macOS (Compile via CMake)</span>
+                <span class="lang-de">Windows 10/11 (Binärpaket x64) · Linux & macOS (Build via scripts/build.sh)</span>
+                <span class="lang-en">Windows 10/11 (Pre-built x64) · Linux & macOS (Build via scripts/build.sh)</span>
               </span>
             </div>
 
             <div class="p-3 sm:px-4 grid sm:grid-cols-12 gap-2 items-baseline">
               <span class="sm:col-span-4 text-zinc-400 font-bold">
-                <span class="lang-de">Inspiration & Namensgebung</span>
-                <span class="lang-en">Inspiration & Identifiers</span>
+                <span class="lang-de">Namensgebung & Identifikatoren</span>
+                <span class="lang-en">Naming & Identifiers</span>
               </span>
               <span class="sm:col-span-8 text-zinc-200">
-                <span class="lang-de">Inspiriert von IrfanView & nomacs · ASCII-Name: uxzView · Speicherpfade: IxView</span>
-                <span class="lang-en">Inspired by IrfanView & nomacs · ASCII name: uxzView · Storage path IDs: IxView</span>
+                <span class="lang-de">Programmdateien und Downloads nutzen ASCII-Namen uxzView · Speicherpfade behalten IxView-IDs</span>
+                <span class="lang-en">Program files and downloads use ASCII name uxzView · Storage identifiers retain IxView</span>
               </span>
             </div>
 
@@ -316,7 +327,7 @@
                 <span class="lang-en">Recognition Tools (OCR/QR)</span>
               </span>
               <span class="sm:col-span-8 text-zinc-200">
-                ZXing-C++ (QR/Barcodes) · Tesseract OCR (DE, EN, FR, JA, KO) im Ordner tools/
+                ZXing-C++ (QR/Barcodes) · Tesseract OCR (DE, EN, FR, JA, KO) im Ordner tools/ (modular entfernbar)
               </span>
             </div>
 
@@ -326,20 +337,18 @@
                 <span class="lang-en">Tech Stack & License</span>
               </span>
               <span class="sm:col-span-8 text-zinc-200">
-                C++20 · Qt 6.8 · LibRaw 16-Bit · GNU GPLv3
+                C++20 · Qt 6.8+ · CMake 3.24+ · libjpeg-turbo · LibRaw 16-Bit · GPL-3.0-or-later
               </span>
             </div>
 
             <div class="p-3 sm:px-4 grid sm:grid-cols-12 gap-2 items-center">
               <span class="sm:col-span-4 text-zinc-400 font-bold shrink-0">SHA-256 (Win64)</span>
               <div class="sm:col-span-8 flex items-center gap-2 min-w-0">
-                <code class="bg-[#101113] border border-[#2a2d35] px-2.5 py-1 text-[11px] text-zinc-200 font-mono truncate select-all flex-grow">
-                  abca4072a05e72474bbab3f1e13998847957e6d3f232a7e003b252791e1abf75
-                </code>
+                <code id="sha256-val" class="bg-[#101113] border border-[#2a2d35] px-2.5 py-1 text-[11px] text-zinc-200 font-mono truncate select-all flex-grow">eaddf4daf508266398e465c6a0e7a64b8abf49499f2ae1efe28aa19302c36c51</code>
                 <button
                   type="button"
-                  onclick="copyText('abca4072a05e72474bbab3f1e13998847957e6d3f232a7e003b252791e1abf75', this)"
-                  class="px-3 py-1 text-xs font-mono font-semibold cursor-pointer transition-colors border shrink-0 bg-[#22252c] hover:bg-[#2d313b] text-zinc-200 border-[#3e424e]"
+                  onclick="copyText('eaddf4daf508266398e465c6a0e7a64b8abf49499f2ae1efe28aa19302c36c51', this)"
+                  class="px-3 py-1 text-xs font-mono font-semibold cursor-pointer transition-colors border bg-[#22252c] hover:bg-[#2d313b] text-zinc-200 border-[#3e424e] shrink-0"
                 >
                   <span class="lang-de">Kopieren</span>
                   <span class="lang-en">Copy</span>
@@ -350,7 +359,7 @@
         </div>
       </section>
 
-      <!-- FUNKTIONEN SECTION -->
+      <!-- FEATURES SECTION (Complete 17 Features from README) -->
       <section id="features">
         <h2 class="section-title">
           <span>
@@ -360,237 +369,283 @@
         </h2>
 
         <div class="border-y border-[#34373e] divide-y divide-[#34373e] text-xs sm:text-[13px] font-mono">
-          <!-- Ordner-Browsing & Cache -->
+          <!-- 1. Folder browsing & caching -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Ordner-Browsing & Cache</span>
-                <span class="lang-en">Folder Browsing & Cache</span>
+                <span class="lang-de">Ordner-Browsing & Caching</span>
+                <span class="lang-en">Folder Browsing & Caching</span>
               </span>
-              <span class="text-zinc-400 font-normal">0,24 ms</span>
+              <span class="text-zinc-400 font-normal">Space / ← →</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Blitzschnelles Navigieren in Ordnern mit Tastatursteuerung und speichereffizientem RAM-Lookahead-Caching für nahtloses Bildwechseln.</span>
-              <span class="lang-en">Fast folder browsing with full keyboard navigation and memory-efficient RAM lookahead caching for seamless image transitions.</span>
+              <span class="lang-de">Blitzschnelles Navigieren in Bildordnern, reaktionsschnelle Tastatursteuerung und speichereffizientes Caching.</span>
+              <span class="lang-en">Fast folder browsing, responsive keyboard navigation and memory-efficient image caching.</span>
             </div>
           </div>
 
-          <!-- Vollbild, Zoom & Diashow -->
+          <!-- 2. Fullscreen, zoom & slideshows -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Vollbild, Zoom & Diashow</span>
-                <span class="lang-en">Fullscreen, Zoom & Slideshow</span>
+                <span class="lang-de">Rahmenlose Anzeige & Vollbild</span>
+                <span class="lang-en">Frameless Canvas & Fullscreen</span>
               </span>
-              <span class="text-zinc-400 font-normal">F11 / Space</span>
+              <span class="text-zinc-400 font-normal">F11 / Maus</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Ablenkungsfreie Vollbildansicht mit Maus-Navigation, automatischen Diashows und bereichsspezifischem Zoom in ausgewählte Bildausschnitte.</span>
-              <span class="lang-en">Distraction-free fullscreen viewing with mouse navigation, automatic slideshows, and region-specific zoom into selected image areas.</span>
+              <span class="lang-de">Rahmenlose Bildanzeige im Fenster- und Vollbildmodus, flüssige Mausnavigation, automatische Diashows und stufenloses Hineinzoomen in markierte Bildausschnitte.</span>
+              <span class="lang-en">Frameless image canvas in window and fullscreen modes, smooth mouse navigation, automated slideshows and precision zoom into selected image areas.</span>
             </div>
           </div>
 
-          <!-- Info-Ecken & Metadaten HUD -->
+          <!-- 3. Optional fullscreen info in any corner -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Info-Ecken & Metadaten-HUD</span>
-                <span class="lang-en">Metadata HUD & Corner Info</span>
+                <span class="lang-de">Vollbild-Info in jeder Ecke</span>
+                <span class="lang-en">Corner Fullscreen Info</span>
               </span>
-              <span class="text-zinc-400 font-normal">
-                <span class="lang-de">I Taste</span>
-                <span class="lang-en">I key</span>
-              </span>
+              <span class="text-zinc-400 font-normal">HUD</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Einstellbare Info-Einblendungen in beliebigen Bildecken (Auflösung, DPI, Dateigröße, Kamera, Objektiv, EXIF/IPTC/XMP) sowie RGB-Echtzeit-Histogramm.</span>
-              <span class="lang-en">Customizable corner info overlays (resolution, DPI, file size, EXIF/IPTC/XMP metadata) plus real-time RGB histogram.</span>
+              <span class="lang-de">Optionale Vollbild-Informationen in jeder beliebigen Ecke: Auflösung, DPI, Dateigröße und ausgewählte Metadaten.</span>
+              <span class="lang-en">Optional fullscreen information in any corner: resolution, DPI, file size and selected metadata.</span>
             </div>
           </div>
 
-          <!-- Zentrierte Nachbarleiste -->
+          <!-- 4. Optional centered thumbnail strip -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
                 <span class="lang-de">Zentrierte Nachbarleiste</span>
-                <span class="lang-en">Centered Culling Strip</span>
+                <span class="lang-en">Centered Thumbnail Strip</span>
               </span>
               <span class="text-zinc-400 font-normal">1–5 Frames</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Optionale, zentrierte Vorschauleiste zum Direktvergleich von 1–5 vorherigen und nachfolgenden Bildern für schnelles Culling.</span>
-              <span class="lang-en">Optional centered thumbnail strip displaying 1–5 preceding and succeeding images for fast culling and comparisons.</span>
+              <span class="lang-de">Optionale, zentrierte Miniaturleiste mit jeweils 1 bis 5 vorherigen und nachfolgenden Bildern für schnellen Bildvergleich.</span>
+              <span class="lang-en">Optional, centered thumbnail strip displaying 1–5 previous and next images for quick visual comparison.</span>
             </div>
           </div>
 
-          <!-- Befehlssuche & Palette -->
+          <!-- 5. Search for editing commands directly from toolbar -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Befehlssuche & Palette</span>
-                <span class="lang-en">Command Palette & Search</span>
+                <span class="lang-de">Befehlssuche in Toolbar</span>
+                <span class="lang-en">Toolbar Command Search</span>
               </span>
               <span class="text-zinc-400 font-normal">Shift+T</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Direkte Suche und Schnellausführung aller Bearbeitungsbefehle und Werkzeuge über die Toolbar oder per Tastatur.</span>
-              <span class="lang-en">Instant search and execution of all editing commands and tools directly from the toolbar or quick keyboard launcher.</span>
+              <span class="lang-de">Direkte Suche und Sofortausführung sämtlicher Bearbeitungsbefehle direkt aus der Werkzeugleiste.</span>
+              <span class="lang-en">Instant search and execution for editing commands directly from the application toolbar.</span>
             </div>
           </div>
 
-          <!-- Bearbeitung & Korrekturen -->
+          <!-- 6. Resize, crop, rotate, flip, colors, auto-correction -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Bearbeitung & Korrekturen</span>
-                <span class="lang-en">Editing & Adjustments</span>
+                <span class="lang-de">Bearbeitung & Autokorrektur</span>
+                <span class="lang-en">Editing & Auto-Correction</span>
               </span>
-              <span class="text-zinc-400 font-normal">Crop / Color</span>
+              <span class="text-zinc-400 font-normal">Transform</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Skalieren, Zuschneiden mit Seitenverhältnis-Presets oder frei, Drehen, Spiegeln, Farbanpassungen und automatische Bildkorrektur.</span>
-              <span class="lang-en">Resize, crop with preset or custom aspect ratios, rotate, flip, color adjustments, and automatic image enhancement.</span>
+              <span class="lang-de">Skalieren, Zuschneiden mit Standard- oder benutzerdefinierten Seitenverhältnissen, Drehen, Spiegeln, Farbanpassungen und automatische Korrektur.</span>
+              <span class="lang-en">Resize, crop with preset or custom aspect ratios, rotate, flip, adjust colors and automatic image correction.</span>
             </div>
           </div>
 
-          <!-- Stapelverarbeitung -->
+          <!-- 7. Visual batch processing -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
                 <span class="lang-de">Visuelle Stapelverarbeitung</span>
                 <span class="lang-en">Visual Batch Processing</span>
               </span>
-              <span class="text-zinc-400 font-normal">Profiles &amp; Watermarks</span>
+              <span class="text-zinc-400 font-normal">Batch Profiles</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Stapelverarbeitung ganzer Bildordner mit wiederverwendbaren Profilen, Wasserzeichen und echten Export-Echtzeit-Vorschauen.</span>
-              <span class="lang-en">Batch processing with reusable profiles, custom watermarks, and real-time export previews before processing.</span>
+              <span class="lang-de">Visuelle Stapelverarbeitung ganzer Ordner mit wiederverwendbaren Profilen, Wasserzeichen und detaillierten Konvertierungsberichten.</span>
+              <span class="lang-en">Visual batch processing with reusable profiles, watermarks, and export conversion reports.</span>
             </div>
           </div>
 
-          <!-- Ratings & Duplicate Search -->
+          <!-- 8. Ratings, labels, metadata search & duplicate detection -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Verwaltung & Duplikate</span>
+                <span class="lang-de">Bewertungen & Duplikate</span>
                 <span class="lang-en">Ratings & Duplicate Search</span>
               </span>
-              <span class="text-zinc-400 font-normal">1–5 Stars / Labels</span>
+              <span class="text-zinc-400 font-normal">Labels &amp; Stars</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Sterne-Bewertungen, Farblabels, gezielte Metadaten-Suche und automatische Erkennung doppelter Aufnahmen.</span>
-              <span class="lang-en">Star ratings, color labels, targeted metadata search, and automated duplicate image detection.</span>
+              <span class="lang-de">Sternebewertungen, Farblabels, gezielte Suche nach Metadaten und automatische Erkennung doppelter Bilder.</span>
+              <span class="lang-en">Ratings, color labels, metadata search and automated duplicate detection.</span>
             </div>
           </div>
 
-          <!-- Papierkorb & Undo -->
+          <!-- 9. System trash & undo/redo for image edits -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Interner Papierkorb & Undo</span>
-                <span class="lang-en">Internal Trash & Undo</span>
+                <span class="lang-de">System-Papierkorb & Undo/Redo</span>
+                <span class="lang-en">System Trash & Undo/Redo</span>
               </span>
-              <span class="text-zinc-400 font-normal">Ctrl+Z</span>
+              <span class="text-zinc-400 font-normal">Ctrl+Z / Del</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Internes Papierkorb-Journal, lückenlose Historie aller Dateioperationen und atomares Rückgängigmachen (Undo per Ctrl+Z).</span>
-              <span class="lang-en">Internal trash integration, full file-operation history, and atomic undo via Ctrl+Z.</span>
+              <span class="lang-de">Direkte Dateilöschung über den Papierkorb des Betriebssystems mit Revisionsprüfung; zuverlässiges Undo/Redo für alle Bildbearbeitungen.</span>
+              <span class="lang-en">Direct file deletion via the operating system trash with pre-delete revision verification; reliable undo/redo history for image edits.</span>
             </div>
           </div>
 
-          <!-- Screenshots & Keybindings -->
+          <!-- 10. Configurable screenshots & shortcuts -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
                 <span class="lang-de">Screenshots & Shortcuts</span>
-                <span class="lang-en">Screenshots & Keybindings</span>
+                <span class="lang-en">Screenshots & Shortcuts</span>
               </span>
-              <span class="text-zinc-400 font-normal">Custom Keys</span>
+              <span class="text-zinc-400 font-normal">Configurable</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Konfigurierbares Screenshot-Werkzeug und frei anpassbare Tastaturkürzel für sämtliche Aktionen.</span>
-              <span class="lang-en">Configurable screenshot capture utility and customizable keyboard shortcuts for all operations.</span>
+              <span class="lang-de">Konfigurierbare Screenshot-Aufnahmen und frei anpassbare Tastaturkürzel für sämtliche Arbeitsabläufe.</span>
+              <span class="lang-en">Configurable screenshot captures and fully customizable keyboard shortcuts.</span>
             </div>
           </div>
 
-          <!-- Offline OCR & QR/Barcode Reader -->
+          <!-- 11. Formats: Raster, RAW, plugins -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Offline OCR & QR-Reader</span>
-                <span class="lang-en">Offline OCR & QR/Barcode</span>
+                <span class="lang-de">Raster, RAW & Plugins</span>
+                <span class="lang-en">Raster, RAW & Plugins</span>
               </span>
-              <span class="text-zinc-400 font-normal">100% Offline</span>
+              <span class="text-zinc-400 font-normal">Broad Support</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Lokales Auslesen von QR-/Barcodes und optische Texterkennung (OCR) aus dem Gesamtbild oder einer Rechtsklick-Auswahl, inkl. deinstallierbarer Sprachpakete.</span>
-              <span class="lang-en">Local QR/barcode scanning and optical text recognition (OCR) from whole image or right-click selection, with modular language packs.</span>
+              <span class="lang-de">JPEG, PNG, WebP, TIFF, GIF, APNG, PSD-Composite, SVG, Kamera-RAW sowie zusätzliche per Plugin bereitgestellte Formate.</span>
+              <span class="lang-en">JPEG, PNG, WebP, TIFF, GIF, APNG, PSD composite images, SVG, RAW and additional plugin-provided formats.</span>
             </div>
           </div>
 
-          <!-- Extensions & Plugins -->
+          <!-- 12. Multi-page, 16-bit, ICC/EXIF/IPTC/XMP -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Format- & Funktions-Plugins</span>
-                <span class="lang-en">Extensions & Plugins</span>
+                <span class="lang-de">16-Bit, Animationen & Metadaten</span>
+                <span class="lang-en">16-bit, Animations & Color</span>
               </span>
-              <span class="text-zinc-400 font-normal">Modular</span>
+              <span class="text-zinc-400 font-normal">ICC / EXIF</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Getrennte Erweiterungen für zusätzliche Bildformate und Funktionen mit frei konfigurierbaren Speicherpfaden.</span>
-              <span class="lang-en">Separate image-format and functional extensions with customizable storage directories.</span>
+              <span class="lang-de">Mehrseitige Dokumente, Animationswiedergabe, 16-Bit-Farbtiefe sowie Unterstützung von ICC-Farbprofilen, EXIF, IPTC und XMP wo vom Format unterstützt.</span>
+              <span class="lang-en">Multi-page images, animation playback, 16-bit image data and ICC/EXIF/IPTC/XMP support where supported by the format.</span>
             </div>
           </div>
 
-          <!-- Portable-Modus -->
+          <!-- 13. ZIP/CBZ archives -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Optionale Portable-Nutzung</span>
-                <span class="lang-en">Optional Portable Mode</span>
+                <span class="lang-de">ZIP/CBZ Archiv-Sammlungen</span>
+                <span class="lang-en">ZIP/CBZ Image Archives</span>
               </span>
-              <span class="text-zinc-400 font-normal">No Registry</span>
+              <span class="text-zinc-400 font-normal">Archive Plugin</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Optionaler Portable-Modus: Alle Einstellungen, Profile, Bewertungen, Erweiterungen und Historie werden direkt neben der Anwendung gespeichert.</span>
-              <span class="lang-en">Optional portable operation storing settings, profiles, ratings, plugins, and file history alongside the executable.</span>
+              <span class="lang-de">Direktes Betrachten von ZIP- und Comic-CBZ-Archiven über das optionale Archivformat-Plugin.</span>
+              <span class="lang-en">Browse ZIP and CBZ image collections directly through the optional archive format plugin.</span>
             </div>
           </div>
 
-          <!-- Multi-Language UI -->
+          <!-- 14. Offline QR/barcode reading and text recognition -->
           <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
             <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
               <span>
-                <span class="lang-de">Mehrsprachiges UI</span>
+                <span class="lang-de">Offline QR & Texterkennung</span>
+                <span class="lang-en">Offline QR & OCR Reader</span>
+              </span>
+              <span class="text-zinc-400 font-normal">ZXing / Tesseract</span>
+            </div>
+            <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
+              <span class="lang-de">Lokales QR-/Barcode-Lesen und optische Texterkennung (OCR) aus dem Vollbild oder per Rechtsklick-Auswahl, mit entbehrlichen Tools und OCR-Sprachpaketen.</span>
+              <span class="lang-en">Offline QR/barcode reading and text recognition from the image or a right-clicked selection, with removable tools and OCR languages.</span>
+            </div>
+          </div>
+
+          <!-- 15. Separate format & function extensions -->
+          <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
+            <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
+              <span>
+                <span class="lang-de">Modulare Erweiterungen</span>
+                <span class="lang-en">Modular Extensions</span>
+              </span>
+              <span class="text-zinc-400 font-normal">Custom Folders</span>
+            </div>
+            <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
+              <span class="lang-de">Getrennte Erweiterungen für Bildformate und Funktionen mit frei konfigurierbaren Speicherordnern.</span>
+              <span class="lang-en">Separate image-format and function extensions, with configurable storage folders.</span>
+            </div>
+          </div>
+
+          <!-- 16. Portable mode -->
+          <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
+            <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
+              <span>
+                <span class="lang-de">Portabler Modus</span>
+                <span class="lang-en">Portable Mode</span>
+              </span>
+              <span class="text-zinc-400 font-normal">Self-contained</span>
+            </div>
+            <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
+              <span class="lang-de">Optionaler portabler Modus für Einstellungen, Profile, Bewertungen und Erweiterungen direkt neben der Anwendung.</span>
+              <span class="lang-en">Optional portable mode for settings, profiles, ratings and extensions beside the app.</span>
+            </div>
+          </div>
+
+          <!-- 17. Multi-language -->
+          <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
+            <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
+              <span>
+                <span class="lang-de">Mehrsprachige Oberfläche</span>
                 <span class="lang-en">Multi-Language UI</span>
               </span>
-              <span class="text-zinc-400 font-normal">DE / EN / KO / JA / FR</span>
+              <span class="text-zinc-400 font-normal">5 Sprachen</span>
             </div>
             <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Interface verfügbar in Deutsch, Englisch, Koreanisch, Japanisch und Französisch.</span>
-              <span class="lang-en">User interface supported in German, English, Korean, Japanese, and French.</span>
+              <span class="lang-de">Oberfläche verfügbar in Deutsch, Englisch, Koreanisch, Japanisch und Französisch.</span>
+              <span class="lang-en">German, English, Korean, Japanese and French interface options.</span>
             </div>
           </div>
+        </div>
 
-          <!-- Offline & Datenschutz -->
-          <div class="py-3.5 grid sm:grid-cols-12 gap-3 items-baseline">
-            <div class="sm:col-span-4 font-bold text-white flex items-center justify-between sm:justify-start gap-3">
-              <span>
-                <span class="lang-de">Offline & Datenschutz</span>
-                <span class="lang-en">Offline & Privacy</span>
-              </span>
-              <span class="text-zinc-400 font-normal">GNU GPLv3</span>
-            </div>
-            <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-              <span class="lang-de">Keine Telemetrie, kein Tracking, keine Cloud-Pflicht. 100% freier Quellcode, der komplett lokal auf deinem System läuft.</span>
-              <span class="lang-en">Zero telemetry, zero tracking, no cloud lock-in. 100% open-source software running entirely on your local system.</span>
-            </div>
+        <!-- Footnote status links from README -->
+        <div class="mt-4 p-3 bg-[#17181a] border border-[#34373e] text-xs text-zinc-400 flex flex-wrap items-center justify-between gap-3">
+          <span>
+            <span class="lang-de">Format-Support, Testabdeckung und aktuelle Einschränkungen im Repository:</span>
+            <span class="lang-en">Format support, test coverage and remaining limitations in the repository:</span>
+          </span>
+          <div class="flex items-center gap-3 font-semibold text-zinc-200">
+            <a href="https://github.com/micha42-dot/uxzView/blob/main/PROJECT_STATUS.md" target="_blank" rel="noopener noreferrer" class="hover:text-white underline">
+              Project Status ↗
+            </a>
+            <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/FORMAT_COMPATIBILITY.md" target="_blank" rel="noopener noreferrer" class="hover:text-white underline">
+              Format Compatibility ↗
+            </a>
+            <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/QUALITY.md" target="_blank" rel="noopener noreferrer" class="hover:text-white underline">
+              Quality Checks ↗
+            </a>
           </div>
         </div>
       </section>
 
-      <!-- FORMATE SECTION -->
+      <!-- FORMATS SECTION -->
       <section id="formats">
         <h2 class="section-title">
           <span>
@@ -633,7 +688,18 @@
                 <td class="py-3 px-4 text-zinc-400">LibRaw 16-Bit Native</td>
               </tr>
               <tr class="hover:bg-[#1a1c20]">
-                <td class="py-3 px-4 font-bold text-white">HDR &amp; Spezial</td>
+                <td class="py-3 px-4 font-bold text-white">
+                  <span class="lang-de">Archive &amp; Sammlungen</span>
+                  <span class="lang-en">Archives &amp; Collections</span>
+                </td>
+                <td class="py-3 px-4 text-zinc-300">
+                  <span class="lang-de">ZIP, CBZ Bildarchive (über das optionale Archivformat-Plugin)</span>
+                  <span class="lang-en">ZIP, CBZ image archives (through the optional archive format plugin)</span>
+                </td>
+                <td class="py-3 px-4 text-zinc-400">Archive Plugin</td>
+              </tr>
+              <tr class="hover:bg-[#1a1c20]">
+                <td class="py-3 px-4 font-bold text-white">HDR, Vector &amp; Spezial</td>
                 <td class="py-3 px-4 text-zinc-300">
                   OpenEXR (.exr), Photoshop (.psd Composite), SVG Vektor (.svg), Targa (.tga), DirectDraw (.dds), Netpbm (.ppm, .pgm), Radiance (.hdr)
                 </td>
@@ -645,16 +711,108 @@
                   <span class="lang-en">Metadata & Profiles</span>
                 </td>
                 <td class="py-3 px-4 text-zinc-300">
-                  ICC Profile (sRGB, Display P3, AdobeRGB), EXIF, IPTC, XMP Metadaten, Mehrseitige Dokumente
+                  <span class="lang-de">ICC Profile (sRGB, Display P3, AdobeRGB), EXIF, IPTC, XMP Metadaten, mehrseitige Dokumente</span>
+                  <span class="lang-en">ICC Profiles (sRGB, Display P3, AdobeRGB), EXIF, IPTC, XMP metadata, multi-page images</span>
                 </td>
-                <td class="py-3 px-4 text-zinc-400">Color Management Engine</td>
+                <td class="py-3 px-4 text-zinc-400">Color Management</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <!-- STANDARD-BETRACHTER SECTION -->
+      <!-- RECOGNITION TOOLS SECTION -->
+      <section id="tools">
+        <h2 class="section-title">
+          <span>
+            <span class="lang-de">Erkennungswerkzeuge (Recognition Tools)</span>
+            <span class="lang-en">Recognition Tools</span>
+          </span>
+        </h2>
+
+        <div class="border border-[#34373e] bg-[#161719] p-4 sm:p-5 font-mono text-xs sm:text-[13px] leading-relaxed text-zinc-300 space-y-4">
+          <p>
+            <span class="lang-de">Das Windows-Paket enthält Werkzeuge zur Erkennung von QR-/Barcodes (ZXing-C++) und Texterkennung (Tesseract) mit OCR für Englisch, Deutsch, Französisch, Japanisch und Koreanisch.</span>
+            <span class="lang-en">The Windows package includes QR/barcode reading (ZXing-C++) and text recognition (Tesseract), with English, German, French, Japanese and Korean OCR.</span>
+          </p>
+          <div class="grid sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 bg-[#111214] border border-[#2e313a]">
+              <span class="font-bold text-white block mb-1">
+                <span class="lang-de">Isolierter Ordner & Ressourcenschonend</span>
+                <span class="lang-en">Isolated Folder & Resource-Friendly</span>
+              </span>
+              <span class="text-zinc-400 leading-normal block">
+                <span class="lang-de">Die Werkzeuge liegen im Verzeichnis tools neben der Anwendung und laufen nur bei explizitem Aufruf.</span>
+                <span class="lang-en">Tools live in tools beside the application and run only when invoked.</span>
+              </span>
+            </div>
+            <div class="p-3 bg-[#111214] border border-[#2e313a]">
+              <span class="font-bold text-white block mb-1">
+                <span class="lang-de">Verwaltung & Pfadkonfiguration</span>
+                <span class="lang-en">Management & Custom Paths</span>
+              </span>
+              <span class="text-zinc-400 leading-normal block">
+                <span class="lang-de">Einzelne Tools/Sprachen können entfernt oder unter Optionen → Erweiterungen verwalten → Funktionserweiterungen konfiguriert werden.</span>
+                <span class="lang-en">Remove individual tools/languages or change their folder under Options → Manage extensions → Function extensions.</span>
+              </span>
+            </div>
+          </div>
+          <p class="text-xs text-zinc-400">
+            <span class="lang-de">Erkennungen arbeiten auf dem gesamten Bild oder einer per Rechtsklick gezogenen Auswahl und lassen die Bildpixel unangetastet.</span>
+            <span class="lang-en">They work on the whole image or a selection and leave image pixels unchanged.</span>
+            <a
+              href="https://github.com/micha42-dot/uxzView/blob/main/docs/TOOL_EXTENSIONS.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white underline font-semibold"
+            >
+              <span class="lang-de">Details zu Funktionserweiterungen ↗</span>
+              <span class="lang-en">Function extensions documentation ↗</span>
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <!-- PORTABLE MODE SECTION -->
+      <section id="portable">
+        <h2 class="section-title">
+          <span>
+            <span class="lang-de">Portabler Modus</span>
+            <span class="lang-en">Portable Mode</span>
+          </span>
+        </h2>
+
+        <div class="border border-[#34373e] bg-[#161719] p-4 sm:p-5 font-mono text-xs sm:text-[13px] leading-relaxed text-zinc-300 space-y-3">
+          <p>
+            <span class="lang-de">Der portable Modus ist verfügbar unter <strong class="text-white">Optionen → Einstellungen → Speicherorte</strong> und wird nach einem Neustart aktiv.</span>
+            <span class="lang-en">Portable mode is available under <strong class="text-white">Options → Settings → Storage locations</strong> and takes effect after restarting.</span>
+          </p>
+          <p>
+            <span class="lang-de">Bestehende Benutzerdaten werden bei der ersten Aktivierung kopiert und an ihrem ursprünglichen Speicherort beibehalten.</span>
+            <span class="lang-en">Existing user data is copied on first activation and retained in its original location.</span>
+          </p>
+          <div class="p-3 bg-[#101113] border border-[#2a2d35] text-xs font-mono text-zinc-200">
+            <span class="text-zinc-400 block mb-1">
+              <span class="lang-de">Zusammen mit der Anwendung verschieben:</span>
+              <span class="lang-en">Move together with the application:</span>
+            </span>
+            <code>portable.mode</code> · <code>IxView-data</code> · <code>tools</code>
+          </div>
+          <div class="pt-1">
+            <a
+              href="https://github.com/micha42-dot/uxzView/blob/main/docs/PORTABLE.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white underline text-xs font-semibold"
+            >
+              <span class="lang-de">Vollständige Dokumentation zum portablen Modus ↗</span>
+              <span class="lang-en">Portable mode full documentation ↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEFAULT APP SECTION -->
       <section id="default-app">
         <h2 class="section-title">
           <span>
@@ -699,100 +857,105 @@
 
           <div class="p-4 sm:p-5 space-y-4 text-zinc-300 leading-relaxed">
             <!-- Windows Panel -->
-            <div id="def-panel-windows" class="space-y-3">
+            <div id="def-panel-windows" class="space-y-4">
               <p>
-                <span class="lang-de">Führe im entpackten Anwendungsordner die Skriptdatei register-windows.bat aus. Sie erkennt den Pfad zu uxzView.exe automatisch und registriert das Programm ohne Administratorrechte.</span>
-                <span class="lang-en">Run register-windows.bat inside the portable application folder. It detects uxzView.exe automatically and registers the application without administrator rights.</span>
+                <span class="lang-de">Führe im portablen Anwendungsordner register-windows.bat aus. Das Skript findet uxzView.exe daneben automatisch. Wenn du das Skript woanders ablegst, passe den IXVIEW_EXE Pfad darin an.</span>
+                <span class="lang-en">Run register-windows.bat in the portable application folder. It finds uxzView.exe beside it automatically. If you keep the script elsewhere, edit the IXVIEW_EXE path inside it.</span>
               </p>
               <div class="p-3 bg-[#101113] border border-[#2a2d35] text-xs font-mono text-zinc-200">
                 <code>register-windows.bat</code>
               </div>
               <p class="text-zinc-400 text-xs">
-                <span class="lang-de">Danach steht üxzView unter Windows in "Öffnen mit" und unter Einstellungen → Apps → Standard-Apps zur Auswahl. Zum Entfernen einfach unregister-windows.bat ausführen.</span>
-                <span class="lang-en">Afterwards, üxzView appears in "Open with" and Settings → Apps → Default apps. Run unregister-windows.bat to remove the registration.</span>
+                <span class="lang-de">üxzView wird für deinen Benutzer in »Öffnen mit« und unter »Einstellungen → Apps → Standard-Apps« registriert. Windows verlangt, dass du diese finale Zuordnung dort selbst triffst.</span>
+                <span class="lang-en">üxzView will be registered for your user in "Open with" and "Settings → Apps → Default apps". Windows requires you to make that final choice yourself.</span>
+              </p>
+
+              <div class="pt-2 border-t border-[#262830] space-y-2">
+                <span class="text-xs font-bold text-white block">
+                  <span class="lang-de">Alternative: Registry-Datei zum manuellen Prüfen oder Importieren erzeugen:</span>
+                  <span class="lang-en">Alternative: Generate a registry file to inspect or import manually:</span>
+                </span>
+                <div class="relative">
+                  <pre id="code-ps-reg" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">./register-windows.ps1 -ExecutablePath 'C:\Apps\üxzView\uxzView.exe' -GenerateOnly -RegFilePath './uxzView.reg'</pre>
+                  <button
+                    type="button"
+                    onclick="copyTerminalText('code-ps-reg', this)"
+                    class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-[#252830] hover:bg-[#323642] border border-[#444855] text-[11px] font-mono cursor-pointer text-zinc-200 transition-colors"
+                  >
+                    <span class="lang-de">Kopieren</span>
+                    <span class="lang-en">Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-zinc-400 text-xs">
+                <span class="lang-de">unregister-windows.bat ausführen, um die Registrierung zu entfernen. Beim Verschieben des Ordners einfach neu registrieren. Keine Administratorrechte erforderlich.</span>
+                <span class="lang-en">Run unregister-windows.bat to remove registration. If you move the folder, register its new location again. No admin rights needed.</span>
+                <a
+                  href="https://github.com/micha42-dot/uxzView/blob/main/docs/FILE_ASSOCIATIONS.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white underline font-semibold"
+                >
+                  <span class="lang-de">Registrierungs-Details ↗</span>
+                  <span class="lang-en">Registration details ↗</span>
+                </a>
               </p>
             </div>
 
             <!-- Linux Panel -->
             <div id="def-panel-linux" class="space-y-3 hidden">
               <p>
-                <span class="lang-de">Installiere üxzView und die dazugehörige org.ixview.IxView.desktop Datei. Anschließend kannst du den Betrachter im "Öffnen mit"-Menü deines Dateimanagers wählen oder per Terminal als Standard festlegen:</span>
-                <span class="lang-en">Install üxzView and org.ixview.IxView.desktop. Select üxzView in your file manager's "Open with" menu or configure system defaults via terminal:</span>
+                <span class="lang-de">Installiere üxzView und dessen Desktop-Eintrag gemäß Bauanleitung. Dein Dateimanager kann üxzView dann im »Öffnen mit«-Menü auswählen. Zum Festlegen gängiger Dateizuordnungen im Terminal:</span>
+                <span class="lang-en">Install üxzView and its desktop entry using the build guide. Your file manager's "Open with" menu can then select üxzView. To set common defaults from a terminal:</span>
               </p>
-              <pre class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">xdg-mime default org.ixview.IxView.desktop image/jpeg image/png image/webp image/gif image/tiff image/bmp</pre>
+              <div class="relative">
+                <pre id="code-xdg-mime" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">xdg-mime default org.ixview.IxView.desktop image/jpeg image/png image/webp image/gif image/tiff image/bmp</pre>
+                <button
+                  type="button"
+                  onclick="copyTerminalText('code-xdg-mime', this)"
+                  class="absolute top-2.5 right-2.5 px-2 py-0.5 bg-[#252830] hover:bg-[#323642] border border-[#444855] text-[11px] font-mono cursor-pointer text-zinc-200 transition-colors"
+                >
+                  <span class="lang-de">Kopieren</span>
+                  <span class="lang-en">Copy</span>
+                </button>
+              </div>
+              <p class="text-xs text-zinc-400">
+                <a
+                  href="https://github.com/micha42-dot/uxzView/blob/main/docs/PLATFORMS.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white underline font-semibold"
+                >
+                  <span class="lang-de">Plattform-Bauanleitung für Linux ↗</span>
+                  <span class="lang-en">Platform build guide for Linux ↗</span>
+                </a>
+              </p>
             </div>
 
             <!-- macOS Panel -->
             <div id="def-panel-macos" class="space-y-3 hidden">
               <p>
-                <span class="lang-de">Verschiebe die gebaute uxzView.app in den Ordner Programme (/Applications). Wähle im Finder ein Bild aus → Informationen (Cmd+I) → Öffnen mit → üxzView → "Alle ändern...".</span>
-                <span class="lang-en">Move the built uxzView.app into /Applications. In Finder, select an image file → Get Info (Cmd+I) → Open with → üxzView → "Change All...".</span>
+                <span class="lang-de">Die gebaute uxzView.app in Programme (/Applications) ablegen und einmalig starten. Im Finder Bild markieren → Informationen (Cmd+I) → Öffnen mit → üxzView → "Alle ändern...". Für jedes gewünschte Bildformat wiederholen.</span>
+                <span class="lang-en">Place the built uxzView.app in Applications and open it once. In Finder, select an image → Get Info (Cmd+I) → Open with → üxzView → "Change All...". Repeat for each image type you want to associate.</span>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CLI PARAMETERS SECTION -->
-      <section id="cli">
-        <h2 class="section-title">
-          <span>
-            <span class="lang-de">Kommandozeilen-Optionen</span>
-            <span class="lang-en">CLI Parameters</span>
-          </span>
-        </h2>
-
-        <div class="border border-[#34373e] overflow-hidden font-mono text-xs">
-          <div class="bg-[#17181a] text-zinc-100 px-4 py-2.5 border-b border-[#34373e] text-xs font-bold">
-            <span>$ üxzView [OPTIONS] [FILE | DIR]</span>
-          </div>
-          <table class="w-full text-left border-collapse text-xs">
-            <tbody class="divide-y divide-[#34373e] text-zinc-200">
-              <tr class="hover:bg-[#1a1c20]">
-                <td class="py-2.5 px-4 text-white font-bold w-1/3 sm:w-1/4">--fullscreen, -f</td>
-                <td class="py-2.5 px-4 text-zinc-300">
-                  <span class="lang-de">Startet direkt im Vollbild</span>
-                  <span class="lang-en">Launch directly in fullscreen</span>
-                </td>
-              </tr>
-              <tr class="hover:bg-[#1a1c20]">
-                <td class="py-2.5 px-4 text-white font-bold">--slideshow &lt;s&gt;</td>
-                <td class="py-2.5 px-4 text-zinc-300">
-                  <span class="lang-de">Automatischer Bildwechsel (Sekunden)</span>
-                  <span class="lang-en">Auto-advance interval in seconds</span>
-                </td>
-              </tr>
-              <tr class="hover:bg-[#1a1c20]">
-                <td class="py-2.5 px-4 text-white font-bold">--raw-fast</td>
-                <td class="py-2.5 px-4 text-zinc-300">
-                  <span class="lang-de">Halbe RAW-Auflösung für schnelles Culling</span>
-                  <span class="lang-en">Half-res RAW decode for fast culling</span>
-                </td>
-              </tr>
-              <tr class="hover:bg-[#1a1c20]">
-                <td class="py-2.5 px-4 text-white font-bold">--scale &lt;1:1|fit&gt;</td>
-                <td class="py-2.5 px-4 text-zinc-300">
-                  <span class="lang-de">Standard-Skalierungsmodus beim Öffnen</span>
-                  <span class="lang-en">Default scaling mode upon opening</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- BUILD FROM SOURCE SECTION (Order: Linux → macOS → Windows) -->
+      <!-- BUILD FROM SOURCE SECTION -->
       <section id="build">
         <h2 class="section-title">
           <span>
-            <span class="lang-de">Selbst kompilieren (Build)</span>
+            <span class="lang-de">Selbst kompilieren (Build from Source)</span>
             <span class="lang-en">Build from Source</span>
           </span>
         </h2>
 
         <div class="font-mono text-xs">
           <div class="border border-[#34373e] overflow-hidden">
-            <!-- Header with OS Tabs (Order: Linux, macOS, Windows) -->
+            <!-- Header with OS Tabs -->
             <div class="bg-[#17181a] px-4 py-2.5 border-b border-[#34373e] flex flex-wrap items-center justify-between gap-3">
               <div class="flex items-center gap-3">
                 <span class="font-bold text-white text-xs">
@@ -828,21 +991,20 @@
               </div>
 
               <a
-                href="https://github.com/micha42-dot/uxzView/archive/refs/tags/0.4.8.tar.gz"
+                href="https://github.com/micha42-dot/uxzView/archive/refs/tags/0.5.0.tar.gz"
                 class="text-zinc-300 hover:text-white underline text-xs"
               >
-                üxzView-0.4.8-source.tar.gz ↗
+                üxzView-0.5.0-source.tar.gz ↗
               </a>
             </div>
 
-            <!-- Tab 1: Linux Build Instructions (Default Active) -->
+            <!-- Linux Build Instructions -->
             <div id="build-panel-linux" class="p-4 sm:p-5 space-y-5 bg-[#161719]">
-              <!-- Linux Step 1: Dependencies -->
               <div class="space-y-2">
                 <div class="flex flex-wrap items-center justify-between gap-2">
                   <span class="font-bold text-white text-xs">
-                    <span class="lang-de">1. Abhängigkeiten installieren (C++20, CMake, Qt 6, LibRaw):</span>
-                    <span class="lang-en">1. Install Dependencies (C++20, CMake, Qt 6, LibRaw):</span>
+                    <span class="lang-de">1. Abhängigkeiten installieren (C++20-Compiler, CMake 3.24+, Qt 6.8+, libjpeg-turbo, LibRaw):</span>
+                    <span class="lang-en">1. Install Dependencies (C++20 compiler, CMake 3.24+, Qt 6.8+, libjpeg-turbo, LibRaw):</span>
                   </span>
                   <div class="flex items-center gap-1 text-[11px]">
                     <button
@@ -873,7 +1035,7 @@
                 </div>
 
                 <div class="relative">
-                  <pre id="code-linux-dep" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">sudo apt install build-essential cmake qt6-base-dev libqt6svg6-dev libraw-dev</pre>
+                  <pre id="code-linux-dep" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">sudo apt install build-essential cmake qt6-base-dev libqt6svg6-dev libraw-dev libjpeg-turbo8-dev</pre>
                   <button
                     type="button"
                     onclick="copyTerminalText('code-linux-dep', this)"
@@ -885,21 +1047,13 @@
                 </div>
               </div>
 
-              <!-- Linux Step 2: Build & Run -->
               <div class="space-y-2 pt-3 border-t border-[#262830]">
-                <div class="flex items-center justify-between">
-                  <span class="font-bold text-white text-xs">
-                    <span class="lang-de">2. Quellcode klonen, kompilieren & starten:</span>
-                    <span class="lang-en">2. Clone, build & run via CMake:</span>
-                  </span>
-                </div>
-
+                <span class="font-bold text-white text-xs">
+                  <span class="lang-de">2. Build-Skript ausführen:</span>
+                  <span class="lang-en">2. Run build script:</span>
+                </span>
                 <div class="relative">
-                  <pre id="code-linux-build" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">git clone https://github.com/micha42-dot/uxzView.git
-cd uxzView
-cmake -B build -DCMAKE_BUILD_TYPE=Release
-cmake --build build --config Release -j $(nproc)
-./build/üxzView</pre>
+                  <pre id="code-linux-build" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">bash scripts/build.sh -DCMAKE_PREFIX_PATH=/path/to/Qt</pre>
                   <button
                     type="button"
                     onclick="copyTerminalText('code-linux-build', this)"
@@ -909,22 +1063,30 @@ cmake --build build --config Release -j $(nproc)
                     <span class="lang-en">Copy</span>
                   </button>
                 </div>
+                <p class="text-zinc-400 text-xs">
+                  <span class="lang-de">Der gemeinsame Quellcode und die Build-Workflows sind für alle drei Systeme vorbereitet; erfolgreiche native Linux-Läufe stehen noch aus.</span>
+                  <span class="lang-en">The shared source code and build workflows are prepared for all three systems; native Linux runs still need validation.</span>
+                  <a
+                    href="https://github.com/micha42-dot/uxzView/blob/main/docs/PLATFORMS.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-white underline"
+                  >
+                    docs/PLATFORMS.md ↗
+                  </a>
+                </p>
               </div>
             </div>
 
-            <!-- Tab 2: macOS Build Instructions -->
+            <!-- macOS Build Instructions -->
             <div id="build-panel-macos" class="p-4 sm:p-5 space-y-5 bg-[#161719] hidden">
-              <!-- macOS Step 1: Homebrew -->
               <div class="space-y-2">
-                <div class="flex items-center justify-between">
-                  <span class="font-bold text-white text-xs">
-                    <span class="lang-de">1. Abhängigkeiten via Homebrew installieren:</span>
-                    <span class="lang-en">1. Install dependencies via Homebrew:</span>
-                  </span>
-                </div>
-
+                <span class="font-bold text-white text-xs">
+                  <span class="lang-de">1. Abhängigkeiten via Homebrew:</span>
+                  <span class="lang-en">1. Dependencies via Homebrew:</span>
+                </span>
                 <div class="relative">
-                  <pre id="code-mac-dep" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">brew install cmake qt libraw</pre>
+                  <pre id="code-mac-dep" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">brew install cmake qt libraw libjpeg-turbo</pre>
                   <button
                     type="button"
                     onclick="copyTerminalText('code-mac-dep', this)"
@@ -936,25 +1098,13 @@ cmake --build build --config Release -j $(nproc)
                 </div>
               </div>
 
-              <!-- macOS Step 2: Build & Run -->
               <div class="space-y-2 pt-3 border-t border-[#262830]">
-                <div class="flex flex-col gap-1">
-                  <span class="font-bold text-white text-xs">
-                    <span class="lang-de">2. Kompilieren (mit Homebrew Qt-Pfad) & starten:</span>
-                    <span class="lang-en">2. Compile (with Homebrew Qt prefix) & run:</span>
-                  </span>
-                  <span class="text-[11px] text-zinc-400">
-                    <span class="lang-de">Homebrew installiert Qt 6 isoliert (keg-only). CMAKE_PREFIX_PATH übergibt den Pfad automatisch an CMake.</span>
-                    <span class="lang-en">Homebrew installs Qt 6 as keg-only. CMAKE_PREFIX_PATH passes the path automatically to CMake.</span>
-                  </span>
-                </div>
-
+                <span class="font-bold text-white text-xs">
+                  <span class="lang-de">2. Build-Skript ausführen:</span>
+                  <span class="lang-en">2. Run build script:</span>
+                </span>
                 <div class="relative">
-                  <pre id="code-mac-build" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">git clone https://github.com/micha42-dot/uxzView.git
-cd uxzView
-cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$(brew --prefix qt)"
-cmake --build build --config Release -j $(sysctl -n hw.ncpu)
-./build/üxzView</pre>
+                  <pre id="code-mac-build" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">bash scripts/build.sh -DCMAKE_PREFIX_PATH="$(brew --prefix qt)"</pre>
                   <button
                     type="button"
                     onclick="copyTerminalText('code-mac-build', this)"
@@ -964,25 +1114,37 @@ cmake --build build --config Release -j $(sysctl -n hw.ncpu)
                     <span class="lang-en">Copy</span>
                   </button>
                 </div>
+                <p class="text-zinc-400 text-xs">
+                  <span class="lang-de">Native macOS-Läufe stehen noch aus. Siehe </span>
+                  <span class="lang-en">Native macOS runs still need validation. See </span>
+                  <a
+                    href="https://github.com/micha42-dot/uxzView/blob/main/docs/PLATFORMS.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-white underline"
+                  >
+                    docs/PLATFORMS.md ↗
+                  </a>
+                </p>
               </div>
             </div>
 
-            <!-- Tab 3: Windows Build Instructions -->
+            <!-- Windows Build Instructions -->
             <div id="build-panel-windows" class="p-4 sm:p-5 space-y-5 bg-[#161719] hidden">
               <div class="space-y-2">
                 <span class="font-bold text-white text-xs">
-                  <span class="lang-de">1. Voraussetzungen (Python 3.14+, CMake 3.24+, Qt 6.8+, C++20 Compiler):</span>
-                  <span class="lang-en">1. Requirements (Python 3.14+, CMake 3.24+, Qt 6.8+, C++20 Compiler):</span>
+                  <span class="lang-de">1. Voraussetzungen (Python 3.14+, CMake 3.24+, Qt 6.8+, libjpeg-turbo, C++20 Compiler):</span>
+                  <span class="lang-en">1. Requirements (Python 3.14+, CMake 3.24+, Qt 6.8+, libjpeg-turbo, C++20 Compiler):</span>
                 </span>
                 <div class="relative">
-                  <pre class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">Python 3.14+ · CMake 3.24+ · Qt 6.8+ · C++20 Compiler</pre>
+                  <pre class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">Python 3.14+ · CMake 3.24+ · Qt 6.8+ · C++20 Compiler · libjpeg-turbo</pre>
                 </div>
               </div>
 
               <div class="space-y-2 pt-3 border-t border-[#262830]">
                 <span class="font-bold text-white text-xs">
-                  <span class="lang-de">2. SDK Bootstrap, Tool-Packs bauen & Deploy ausführen:</span>
-                  <span class="lang-en">2. Run SDK bootstrap, build tool packs & deploy:</span>
+                  <span class="lang-de">2. SDK Bootstrap, Tool-Packs, Build & Deploy:</span>
+                  <span class="lang-en">2. SDK bootstrap, tool packs, build & deploy:</span>
                 </span>
                 <div class="relative">
                   <pre id="code-win-build" class="terminal-block overflow-x-auto text-xs font-mono leading-relaxed text-[#f1f2f4]">python scripts/bootstrap_sdk.py
@@ -998,7 +1160,92 @@ python scripts/deploy.py</pre>
                     <span class="lang-en">Copy</span>
                   </button>
                 </div>
+                <p class="text-zinc-400 text-xs">
+                  <span class="lang-de">Deployment baut zusätzlich die kleineren HEIF/AVIF-Bibliotheken aus gepinnten Quellen. Die Quellarchive werden einmalig geladen und lokal gecacht.</span>
+                  <span class="lang-en">Deployment also builds the smaller HEIF/AVIF libraries from pinned sources. Their source archives are downloaded once and cached locally.</span>
+                </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOCUMENTATION & REFERENCES SECTION (Direct from README) -->
+      <section id="docs">
+        <h2 class="section-title">
+          <span>
+            <span class="lang-de">Dokumentation & Referenzen</span>
+            <span class="lang-en">Documentation & References</span>
+          </span>
+        </h2>
+
+        <div class="border border-[#34373e] bg-[#161719] divide-y divide-[#2a2d35] font-mono text-xs">
+          <div class="p-3 sm:px-4 grid sm:grid-cols-12 gap-2 items-baseline">
+            <span class="sm:col-span-4 text-white font-bold">
+              <span class="lang-de">Projektstatus & Qualität</span>
+              <span class="lang-en">Status & Quality</span>
+            </span>
+            <div class="sm:col-span-8 flex flex-wrap gap-x-4 gap-y-1">
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/PROJECT_STATUS.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                PROJECT_STATUS.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/FORMAT_COMPATIBILITY.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/FORMAT_COMPATIBILITY.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/QUALITY.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/QUALITY.md ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="p-3 sm:px-4 grid sm:grid-cols-12 gap-2 items-baseline">
+            <span class="sm:col-span-4 text-white font-bold">
+              <span class="lang-de">Architektur & Module</span>
+              <span class="lang-en">Architecture & Modules</span>
+            </span>
+            <div class="sm:col-span-8 flex flex-wrap gap-x-4 gap-y-1">
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/ARCHITECTURE.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/PORTABLE.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/PORTABLE.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/SETTINGS.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/SETTINGS.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/TOOL_EXTENSIONS.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/TOOL_EXTENSIONS.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/FILE_ASSOCIATIONS.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/FILE_ASSOCIATIONS.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/UI_STYLE.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/UI_STYLE.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/UI_UX_REVIEW_2026-10-29.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/UI_UX_REVIEW_2026-10-29.md ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="p-3 sm:px-4 grid sm:grid-cols-12 gap-2 items-baseline">
+            <span class="sm:col-span-4 text-white font-bold">
+              <span class="lang-de">Mitwirken & Lizenzen</span>
+              <span class="lang-en">Contributing & Licenses</span>
+            </span>
+            <div class="sm:col-span-8 flex flex-wrap gap-x-4 gap-y-1">
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                CONTRIBUTING.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/DEVELOPMENT.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/DEVELOPMENT.md ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                LICENSE (GPL-3.0-or-later) ↗
+              </a>
+              <a href="https://github.com/micha42-dot/uxzView/blob/main/docs/THIRD_PARTY.md" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white underline">
+                docs/THIRD_PARTY.md ↗
+              </a>
             </div>
           </div>
         </div>
@@ -1011,12 +1258,11 @@ python scripts/deploy.py</pre>
         </h2>
 
         <div class="space-y-6 font-mono text-xs sm:text-[13px]">
-          <!-- Completed Milestones -->
           <div class="border border-[#34373e] overflow-hidden">
             <div class="bg-[#17181a] px-4 py-2.5 border-b border-[#34373e] flex items-center justify-between">
               <span class="font-bold text-white text-xs">
-                <span class="lang-de">1. Bisherige Meilensteine</span>
-                <span class="lang-en">1. Completed Milestones</span>
+                <span class="lang-de">Bisherige Meilensteine</span>
+                <span class="lang-en">Completed Milestones</span>
               </span>
               <a
                 href="https://github.com/micha42-dot/uxzView/blob/main/CHANGELOG.md"
@@ -1031,6 +1277,20 @@ python scripts/deploy.py</pre>
             <div class="divide-y divide-[#34373e] text-zinc-300">
               <div class="p-4 grid sm:grid-cols-12 gap-3 items-baseline hover:bg-[#1a1c20]">
                 <div class="sm:col-span-4 font-bold text-white">
+                  <span>v0.5.0</span>
+                  <span class="block text-[11px] text-zinc-400 font-normal">
+                    <span class="lang-de">Rahmenloses Canvas & Architektur-Audit</span>
+                    <span class="lang-en">Frameless Canvas & Architecture Audit</span>
+                  </span>
+                </div>
+                <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
+                  <span class="lang-de">Rahmenlose Bildanzeige im Fenster- und Vollbildmodus, kompakte Einstellungen in 9 Kategorien, atomare Direktexporte im Batch-Prozessor, Dateilöschung über den nativen System-Papierkorb mit Revisionsprüfung und beschleunigtes klassisches Umbenennen.</span>
+                  <span class="lang-en">Frameless image canvas in window and fullscreen modes, compact settings in 9 categories, direct atomic batch exports, system trash integration with pre-delete revision verification, and accelerated classic batch renaming.</span>
+                </div>
+              </div>
+
+              <div class="p-4 grid sm:grid-cols-12 gap-3 items-baseline hover:bg-[#1a1c20]">
+                <div class="sm:col-span-4 font-bold text-white">
                   <span>v0.4.5 – v0.4.8</span>
                   <span class="block text-[11px] text-zinc-400 font-normal">
                     <span class="lang-de">Befehlssuche, Service-Architektur & Caching</span>
@@ -1038,8 +1298,8 @@ python scripts/deploy.py</pre>
                   </span>
                 </div>
                 <div class="sm:col-span-8 text-zinc-300 leading-relaxed">
-                  <span class="lang-de">Befehlssuche mit Direkt-Caching, separater asynchroner Verzeichnisdienst mit kontrollierter Nebenläufigkeit, zweistufige Validierung von Speicherzielen vor dem Schreiben, Space/Backspace Bild-Navigation und optimierte Nearest-Neighbor Pufferverwaltung.</span>
-                  <span class="lang-en">Command search with direct row model caching, separate asynchronous directory service with bounded concurrency, two-stage pre-encoding save destination validation, Space/Backspace image navigation, and optimized nearest-neighbor buffer allocation.</span>
+                  <span class="lang-de">Befehlssuche mit Direkt-Caching, DirectoryIndexService mit Abbruchsteuerung, zweistufige Validierung von Speicherzielen vor dem Schreiben, Space/Backspace Bild-Navigation und optimierte Nearest-Neighbor Pufferverwaltung.</span>
+                  <span class="lang-en">Command search with direct row model caching, DirectoryIndexService with cancellation, two-stage pre-encoding save destination validation, Space/Backspace image navigation, and optimized nearest-neighbor buffer allocation.</span>
                 </div>
               </div>
 
@@ -1073,12 +1333,11 @@ python scripts/deploy.py</pre>
             </div>
           </div>
 
-          <!-- Upcoming Roadmap -->
           <div class="border border-[#34373e] overflow-hidden">
             <div class="bg-[#17181a] px-4 py-2.5 border-b border-[#34373e] flex items-center justify-between">
               <span class="font-bold text-white text-xs">
-                <span class="lang-de">2. Ausblick & Nächste Schritte</span>
-                <span class="lang-en">2. Upcoming & Next Steps</span>
+                <span class="lang-de">Ausblick & Nächste Schritte</span>
+                <span class="lang-en">Upcoming & Next Steps</span>
               </span>
               <span class="text-[11px] font-bold text-white bg-[#252830] px-2 py-0.5 border border-[#444855]">
                 <span class="lang-de">IN ENTWICKLUNG</span>
@@ -1188,7 +1447,6 @@ python scripts/deploy.py</pre>
             </span>
           </p>
 
-          <!-- Specifications Box -->
           <div class="pt-1">
             <div class="border border-[#2e313a] bg-[#121315] divide-y divide-[#2e313a] text-xs font-mono">
               <div class="p-3 grid sm:grid-cols-12 gap-2 items-baseline">
@@ -1250,7 +1508,7 @@ python scripts/deploy.py</pre>
           >
             micha42-dot
           </a>
-          · GNU GPLv3.
+          · GPL-3.0-or-later.
         </div>
 
         <div class="flex flex-wrap items-center gap-5 text-zinc-300 font-mono">
@@ -1270,7 +1528,7 @@ python scripts/deploy.py</pre>
       </div>
     </footer>
 
-    <!-- Vanilla JavaScript for Tab Switches, Language Toggle, & Clipboard -->
+    <!-- JavaScript for Tabs, Language Toggle, and Clipboard -->
     <script>
       let currentLang = 'de';
       let currentBuildOS = 'linux';
@@ -1278,9 +1536,9 @@ python scripts/deploy.py</pre>
       let currentDefOS = 'windows';
 
       const linuxDeps = {
-        ubuntu: 'sudo apt install build-essential cmake qt6-base-dev libqt6svg6-dev libraw-dev',
-        arch: 'sudo pacman -S base-devel cmake qt6-base qt6-svg libraw',
-        fedora: 'sudo dnf install gcc-c++ cmake qt6-qtbase-devel qt6-qtsvg-devel LibRaw-devel'
+        ubuntu: 'sudo apt install build-essential cmake qt6-base-dev libqt6svg6-dev libraw-dev libjpeg-turbo8-dev',
+        arch: 'sudo pacman -S base-devel cmake qt6-base qt6-svg libraw libjpeg-turbo',
+        fedora: 'sudo dnf install gcc-c++ cmake qt6-qtbase-devel qt6-qtsvg-devel LibRaw-devel libjpeg-turbo-devel'
       };
 
       function setLanguage(lang) {
@@ -1358,7 +1616,7 @@ python scripts/deploy.py</pre>
         copyText(text, btnElement);
       }
 
-      // Initialize default state
+      // Initialize default states
       document.addEventListener('DOMContentLoaded', () => {
         setLanguage('de');
         setBuildPlatform('linux');
